@@ -1,0 +1,202 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /home/cnku/Parcher/app/src/main/AndroidManifest.xml:2:1-31:12
+INJECTED from /home/cnku/Parcher/app/src/main/AndroidManifest.xml:2:1-31:12
+INJECTED from /home/cnku/Parcher/app/src/main/AndroidManifest.xml:2:1-31:12
+INJECTED from /home/cnku/Parcher/app/src/main/AndroidManifest.xml:2:1-31:12
+MERGED from [com.google.android.material:material:1.1.0-alpha07] /home/cnku/.gradle/caches/transforms-2/files-2.1/75cf028d0de4859a9a63c776759561e5/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.appcompat:appcompat:1.1.0-alpha05] /home/cnku/.gradle/caches/transforms-2/files-2.1/c4f3a2337948fe9493810e1d5b0dce00/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.core:core-ktx:1.0.2] /home/cnku/.gradle/caches/transforms-2/files-2.1/dae8ed885e4c1ac7943701ded7b88720/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] /home/cnku/.gradle/caches/transforms-2/files-2.1/99b025d331c86c4a1bcf118447f9527a/AndroidManifest.xml:2:1-11:12
+MERGED from [androidx.cardview:cardview:1.0.0] /home/cnku/.gradle/caches/transforms-2/files-2.1/932fcf25ce9c88d700199ef86e5f70bc/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.viewpager2:viewpager2:1.0.0-alpha04] /home/cnku/.gradle/caches/transforms-2/files-2.1/432065df2a522167992495c0c7efeccf/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.recyclerview:recyclerview:1.1.0-alpha05] /home/cnku/.gradle/caches/transforms-2/files-2.1/74682361b805d0ec067d4d31cf74d637/AndroidManifest.xml:17:1-22:12
+MERGED from [de.hdodenhof:circleimageview:3.0.0] /home/cnku/.gradle/caches/transforms-2/files-2.1/26ec4526b03ec93e46f89e9f68896c21/AndroidManifest.xml:2:1-11:12
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] /home/cnku/.gradle/caches/transforms-2/files-2.1/ba8dd0fdccbbf0af4a0babcfa5511907/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /home/cnku/.gradle/caches/transforms-2/files-2.1/92d3d5d5d62c5a10a910503af6817081/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0-alpha01] /home/cnku/.gradle/caches/transforms-2/files-2.1/9da4c8e6fe8232f7b95d7435715301fc/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.transition:transition:1.0.1] /home/cnku/.gradle/caches/transforms-2/files-2.1/3626757c88cecf1641e83c4dbae77970/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.appcompat:appcompat-resources:1.1.0-alpha05] /home/cnku/.gradle/caches/transforms-2/files-2.1/395b6453e7b803985eb1f33253974fed/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0-beta01] /home/cnku/.gradle/caches/transforms-2/files-2.1/8062efd6aceff1989586276a2b17f3bd/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0-beta01] /home/cnku/.gradle/caches/transforms-2/files-2.1/5497f4ee8efee980cd89409e6d955925/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.fragment:fragment:1.1.0-alpha08] /home/cnku/.gradle/caches/transforms-2/files-2.1/3e8efa82b30a7f7393eefe7b22fbc18b/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.loader:loader:1.0.0] /home/cnku/.gradle/caches/transforms-2/files-2.1/d42464a2cae47dc660d5330611c55d81/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /home/cnku/.gradle/caches/transforms-2/files-2.1/247e34d8a86ab31585584a4cdafbb47f/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.viewpager:viewpager:1.0.0] /home/cnku/.gradle/caches/transforms-2/files-2.1/9b8a55a79459046b2ce6310627d3db75/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] /home/cnku/.gradle/caches/transforms-2/files-2.1/ab001df860c338e274556c6f3d7d9b42/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.customview:customview:1.0.0] /home/cnku/.gradle/caches/transforms-2/files-2.1/71403d806c48e31ca1a276b0140b84bd/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /home/cnku/.gradle/caches/transforms-2/files-2.1/1a8e3b39d99d1e8d4948e34661c683f0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] /home/cnku/.gradle/caches/transforms-2/files-2.1/38d95299e090226f247cae924f7b5060/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.activity:activity:1.0.0-alpha08] /home/cnku/.gradle/caches/transforms-2/files-2.1/1f9a7d88677628c287423967365dd268/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.core:core:1.1.0-beta01] /home/cnku/.gradle/caches/transforms-2/files-2.1/c4d0a3788a5a3cafbbb55ba6af6d18e8/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.documentfile:documentfile:1.0.0] /home/cnku/.gradle/caches/transforms-2/files-2.1/a398823713119f871216e9573c0fefc7/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /home/cnku/.gradle/caches/transforms-2/files-2.1/a74aeebe1067337f9040dd9453026981/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.print:print:1.0.0] /home/cnku/.gradle/caches/transforms-2/files-2.1/a9050a5045ffba88e60cb6dc949e6175/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /home/cnku/.gradle/caches/transforms-2/files-2.1/4fba50714d1b5b95dadef09c4fc6ad95/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0-beta01] /home/cnku/.gradle/caches/transforms-2/files-2.1/4e36e75624ade5f8874a87a698103916/AndroidManifest.xml:17:1-25:12
+MERGED from [androidx.interpolator:interpolator:1.0.0] /home/cnku/.gradle/caches/transforms-2/files-2.1/94928fcc03ac48b4979585d520e349b6/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /home/cnku/.gradle/caches/transforms-2/files-2.1/500940f8db2bcc60a553ec8c264e73a6/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] /home/cnku/.gradle/caches/transforms-2/files-2.1/795c3b77daa74e0534a6b0ae3b112d25/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.arch.core:core-runtime:2.0.0] /home/cnku/.gradle/caches/transforms-2/files-2.1/37b98cb6285da9c730a4c3c79d9220b3/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.2.0-alpha01] /home/cnku/.gradle/caches/transforms-2/files-2.1/f26b169972cf005c1b16742373e7d476/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.savedstate:savedstate:1.0.0-beta01] /home/cnku/.gradle/caches/transforms-2/files-2.1/dda854d932a4297b2da0ad078eb50cf3/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.2.0-alpha01] /home/cnku/.gradle/caches/transforms-2/files-2.1/e03e119e48bd43adcf412394c6b0a72d/AndroidManifest.xml:17:1-22:12
+INJECTED from /home/cnku/Parcher/app/src/main/AndroidManifest.xml:2:1-31:12
+INJECTED from /home/cnku/Parcher/app/src/main/AndroidManifest.xml:2:1-31:12
+INJECTED from /home/cnku/Parcher/app/src/main/AndroidManifest.xml:2:1-31:12
+	package
+		ADDED from /home/cnku/Parcher/app/src/main/AndroidManifest.xml:3:11-42
+		INJECTED from /home/cnku/Parcher/app/src/main/AndroidManifest.xml
+		INJECTED from /home/cnku/Parcher/app/src/main/AndroidManifest.xml
+	android:versionName
+		INJECTED from /home/cnku/Parcher/app/src/main/AndroidManifest.xml
+		ADDED from /home/cnku/Parcher/app/src/main/AndroidManifest.xml:2:1-31:12
+		INJECTED from /home/cnku/Parcher/app/src/main/AndroidManifest.xml
+	android:versionCode
+		INJECTED from /home/cnku/Parcher/app/src/main/AndroidManifest.xml
+		ADDED from /home/cnku/Parcher/app/src/main/AndroidManifest.xml:2:1-31:12
+		INJECTED from /home/cnku/Parcher/app/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /home/cnku/Parcher/app/src/main/AndroidManifest.xml:2:11-69
+application
+ADDED from /home/cnku/Parcher/app/src/main/AndroidManifest.xml:5:5-29:19
+MERGED from [com.google.android.material:material:1.1.0-alpha07] /home/cnku/.gradle/caches/transforms-2/files-2.1/75cf028d0de4859a9a63c776759561e5/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.material:material:1.1.0-alpha07] /home/cnku/.gradle/caches/transforms-2/files-2.1/75cf028d0de4859a9a63c776759561e5/AndroidManifest.xml:22:5-20
+MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] /home/cnku/.gradle/caches/transforms-2/files-2.1/99b025d331c86c4a1bcf118447f9527a/AndroidManifest.xml:9:5-20
+MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] /home/cnku/.gradle/caches/transforms-2/files-2.1/99b025d331c86c4a1bcf118447f9527a/AndroidManifest.xml:9:5-20
+MERGED from [de.hdodenhof:circleimageview:3.0.0] /home/cnku/.gradle/caches/transforms-2/files-2.1/26ec4526b03ec93e46f89e9f68896c21/AndroidManifest.xml:9:5-20
+MERGED from [de.hdodenhof:circleimageview:3.0.0] /home/cnku/.gradle/caches/transforms-2/files-2.1/26ec4526b03ec93e46f89e9f68896c21/AndroidManifest.xml:9:5-20
+MERGED from [androidx.core:core:1.1.0-beta01] /home/cnku/.gradle/caches/transforms-2/files-2.1/c4d0a3788a5a3cafbbb55ba6af6d18e8/AndroidManifest.xml:22:5-89
+MERGED from [androidx.core:core:1.1.0-beta01] /home/cnku/.gradle/caches/transforms-2/files-2.1/c4d0a3788a5a3cafbbb55ba6af6d18e8/AndroidManifest.xml:22:5-89
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0-beta01] /home/cnku/.gradle/caches/transforms-2/files-2.1/4e36e75624ade5f8874a87a698103916/AndroidManifest.xml:22:5-23:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0-beta01] /home/cnku/.gradle/caches/transforms-2/files-2.1/4e36e75624ade5f8874a87a698103916/AndroidManifest.xml:22:5-23:19
+	android:appComponentFactory
+		ADDED from [androidx.core:core:1.1.0-beta01] /home/cnku/.gradle/caches/transforms-2/files-2.1/c4d0a3788a5a3cafbbb55ba6af6d18e8/AndroidManifest.xml:22:18-86
+	android:supportsRtl
+		ADDED from /home/cnku/Parcher/app/src/main/AndroidManifest.xml:10:13-39
+	android:label
+		ADDED from /home/cnku/Parcher/app/src/main/AndroidManifest.xml:8:13-45
+	android:roundIcon
+		ADDED from /home/cnku/Parcher/app/src/main/AndroidManifest.xml:9:13-52
+	android:icon
+		ADDED from /home/cnku/Parcher/app/src/main/AndroidManifest.xml:7:13-47
+	android:allowBackup
+		ADDED from /home/cnku/Parcher/app/src/main/AndroidManifest.xml:6:13-39
+	android:theme
+		ADDED from /home/cnku/Parcher/app/src/main/AndroidManifest.xml:11:13-44
+activity#com.schoolfam.parcher.LoginActivity
+ADDED from /home/cnku/Parcher/app/src/main/AndroidManifest.xml:12:9-13:20
+	android:name
+		ADDED from /home/cnku/Parcher/app/src/main/AndroidManifest.xml:12:19-48
+activity#com.schoolfam.parcher.SplashActivity
+ADDED from /home/cnku/Parcher/app/src/main/AndroidManifest.xml:14:9-20:20
+	android:name
+		ADDED from /home/cnku/Parcher/app/src/main/AndroidManifest.xml:14:19-49
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from /home/cnku/Parcher/app/src/main/AndroidManifest.xml:15:13-19:29
+action#android.intent.action.MAIN
+ADDED from /home/cnku/Parcher/app/src/main/AndroidManifest.xml:16:17-68
+	android:name
+		ADDED from /home/cnku/Parcher/app/src/main/AndroidManifest.xml:16:25-66
+category#android.intent.category.LAUNCHER
+ADDED from /home/cnku/Parcher/app/src/main/AndroidManifest.xml:18:17-76
+	android:name
+		ADDED from /home/cnku/Parcher/app/src/main/AndroidManifest.xml:18:27-74
+activity#com.schoolfam.parcher.MainActivity
+ADDED from /home/cnku/Parcher/app/src/main/AndroidManifest.xml:21:9-28:20
+	android:label
+		ADDED from /home/cnku/Parcher/app/src/main/AndroidManifest.xml:23:17-49
+	android:theme
+		ADDED from /home/cnku/Parcher/app/src/main/AndroidManifest.xml:24:17-60
+	android:name
+		ADDED from /home/cnku/Parcher/app/src/main/AndroidManifest.xml:22:17-45
+intent-filter#action:name:android.intent.action.MAIN
+ADDED from /home/cnku/Parcher/app/src/main/AndroidManifest.xml:25:13-27:29
+uses-sdk
+INJECTED from /home/cnku/Parcher/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /home/cnku/Parcher/app/src/main/AndroidManifest.xml
+INJECTED from /home/cnku/Parcher/app/src/main/AndroidManifest.xml
+MERGED from [com.google.android.material:material:1.1.0-alpha07] /home/cnku/.gradle/caches/transforms-2/files-2.1/75cf028d0de4859a9a63c776759561e5/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.material:material:1.1.0-alpha07] /home/cnku/.gradle/caches/transforms-2/files-2.1/75cf028d0de4859a9a63c776759561e5/AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat:1.1.0-alpha05] /home/cnku/.gradle/caches/transforms-2/files-2.1/c4f3a2337948fe9493810e1d5b0dce00/AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat:1.1.0-alpha05] /home/cnku/.gradle/caches/transforms-2/files-2.1/c4f3a2337948fe9493810e1d5b0dce00/AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core-ktx:1.0.2] /home/cnku/.gradle/caches/transforms-2/files-2.1/dae8ed885e4c1ac7943701ded7b88720/AndroidManifest.xml:5:5-44
+MERGED from [androidx.core:core-ktx:1.0.2] /home/cnku/.gradle/caches/transforms-2/files-2.1/dae8ed885e4c1ac7943701ded7b88720/AndroidManifest.xml:5:5-44
+MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] /home/cnku/.gradle/caches/transforms-2/files-2.1/99b025d331c86c4a1bcf118447f9527a/AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] /home/cnku/.gradle/caches/transforms-2/files-2.1/99b025d331c86c4a1bcf118447f9527a/AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.cardview:cardview:1.0.0] /home/cnku/.gradle/caches/transforms-2/files-2.1/932fcf25ce9c88d700199ef86e5f70bc/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cardview:cardview:1.0.0] /home/cnku/.gradle/caches/transforms-2/files-2.1/932fcf25ce9c88d700199ef86e5f70bc/AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager2:viewpager2:1.0.0-alpha04] /home/cnku/.gradle/caches/transforms-2/files-2.1/432065df2a522167992495c0c7efeccf/AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager2:viewpager2:1.0.0-alpha04] /home/cnku/.gradle/caches/transforms-2/files-2.1/432065df2a522167992495c0c7efeccf/AndroidManifest.xml:20:5-44
+MERGED from [androidx.recyclerview:recyclerview:1.1.0-alpha05] /home/cnku/.gradle/caches/transforms-2/files-2.1/74682361b805d0ec067d4d31cf74d637/AndroidManifest.xml:20:5-44
+MERGED from [androidx.recyclerview:recyclerview:1.1.0-alpha05] /home/cnku/.gradle/caches/transforms-2/files-2.1/74682361b805d0ec067d4d31cf74d637/AndroidManifest.xml:20:5-44
+MERGED from [de.hdodenhof:circleimageview:3.0.0] /home/cnku/.gradle/caches/transforms-2/files-2.1/26ec4526b03ec93e46f89e9f68896c21/AndroidManifest.xml:5:5-7:41
+MERGED from [de.hdodenhof:circleimageview:3.0.0] /home/cnku/.gradle/caches/transforms-2/files-2.1/26ec4526b03ec93e46f89e9f68896c21/AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] /home/cnku/.gradle/caches/transforms-2/files-2.1/ba8dd0fdccbbf0af4a0babcfa5511907/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] /home/cnku/.gradle/caches/transforms-2/files-2.1/ba8dd0fdccbbf0af4a0babcfa5511907/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /home/cnku/.gradle/caches/transforms-2/files-2.1/92d3d5d5d62c5a10a910503af6817081/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /home/cnku/.gradle/caches/transforms-2/files-2.1/92d3d5d5d62c5a10a910503af6817081/AndroidManifest.xml:20:5-44
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0-alpha01] /home/cnku/.gradle/caches/transforms-2/files-2.1/9da4c8e6fe8232f7b95d7435715301fc/AndroidManifest.xml:20:5-44
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0-alpha01] /home/cnku/.gradle/caches/transforms-2/files-2.1/9da4c8e6fe8232f7b95d7435715301fc/AndroidManifest.xml:20:5-44
+MERGED from [androidx.transition:transition:1.0.1] /home/cnku/.gradle/caches/transforms-2/files-2.1/3626757c88cecf1641e83c4dbae77970/AndroidManifest.xml:20:5-44
+MERGED from [androidx.transition:transition:1.0.1] /home/cnku/.gradle/caches/transforms-2/files-2.1/3626757c88cecf1641e83c4dbae77970/AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat-resources:1.1.0-alpha05] /home/cnku/.gradle/caches/transforms-2/files-2.1/395b6453e7b803985eb1f33253974fed/AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat-resources:1.1.0-alpha05] /home/cnku/.gradle/caches/transforms-2/files-2.1/395b6453e7b803985eb1f33253974fed/AndroidManifest.xml:20:5-44
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0-beta01] /home/cnku/.gradle/caches/transforms-2/files-2.1/8062efd6aceff1989586276a2b17f3bd/AndroidManifest.xml:20:5-44
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0-beta01] /home/cnku/.gradle/caches/transforms-2/files-2.1/8062efd6aceff1989586276a2b17f3bd/AndroidManifest.xml:20:5-44
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0-beta01] /home/cnku/.gradle/caches/transforms-2/files-2.1/5497f4ee8efee980cd89409e6d955925/AndroidManifest.xml:20:5-44
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0-beta01] /home/cnku/.gradle/caches/transforms-2/files-2.1/5497f4ee8efee980cd89409e6d955925/AndroidManifest.xml:20:5-44
+MERGED from [androidx.fragment:fragment:1.1.0-alpha08] /home/cnku/.gradle/caches/transforms-2/files-2.1/3e8efa82b30a7f7393eefe7b22fbc18b/AndroidManifest.xml:20:5-44
+MERGED from [androidx.fragment:fragment:1.1.0-alpha08] /home/cnku/.gradle/caches/transforms-2/files-2.1/3e8efa82b30a7f7393eefe7b22fbc18b/AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] /home/cnku/.gradle/caches/transforms-2/files-2.1/d42464a2cae47dc660d5330611c55d81/AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] /home/cnku/.gradle/caches/transforms-2/files-2.1/d42464a2cae47dc660d5330611c55d81/AndroidManifest.xml:20:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /home/cnku/.gradle/caches/transforms-2/files-2.1/247e34d8a86ab31585584a4cdafbb47f/AndroidManifest.xml:20:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /home/cnku/.gradle/caches/transforms-2/files-2.1/247e34d8a86ab31585584a4cdafbb47f/AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] /home/cnku/.gradle/caches/transforms-2/files-2.1/9b8a55a79459046b2ce6310627d3db75/AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] /home/cnku/.gradle/caches/transforms-2/files-2.1/9b8a55a79459046b2ce6310627d3db75/AndroidManifest.xml:20:5-44
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] /home/cnku/.gradle/caches/transforms-2/files-2.1/ab001df860c338e274556c6f3d7d9b42/AndroidManifest.xml:20:5-44
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] /home/cnku/.gradle/caches/transforms-2/files-2.1/ab001df860c338e274556c6f3d7d9b42/AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.0.0] /home/cnku/.gradle/caches/transforms-2/files-2.1/71403d806c48e31ca1a276b0140b84bd/AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.0.0] /home/cnku/.gradle/caches/transforms-2/files-2.1/71403d806c48e31ca1a276b0140b84bd/AndroidManifest.xml:20:5-44
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /home/cnku/.gradle/caches/transforms-2/files-2.1/1a8e3b39d99d1e8d4948e34661c683f0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /home/cnku/.gradle/caches/transforms-2/files-2.1/1a8e3b39d99d1e8d4948e34661c683f0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] /home/cnku/.gradle/caches/transforms-2/files-2.1/38d95299e090226f247cae924f7b5060/AndroidManifest.xml:20:5-44
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] /home/cnku/.gradle/caches/transforms-2/files-2.1/38d95299e090226f247cae924f7b5060/AndroidManifest.xml:20:5-44
+MERGED from [androidx.activity:activity:1.0.0-alpha08] /home/cnku/.gradle/caches/transforms-2/files-2.1/1f9a7d88677628c287423967365dd268/AndroidManifest.xml:20:5-44
+MERGED from [androidx.activity:activity:1.0.0-alpha08] /home/cnku/.gradle/caches/transforms-2/files-2.1/1f9a7d88677628c287423967365dd268/AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.1.0-beta01] /home/cnku/.gradle/caches/transforms-2/files-2.1/c4d0a3788a5a3cafbbb55ba6af6d18e8/AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.1.0-beta01] /home/cnku/.gradle/caches/transforms-2/files-2.1/c4d0a3788a5a3cafbbb55ba6af6d18e8/AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] /home/cnku/.gradle/caches/transforms-2/files-2.1/a398823713119f871216e9573c0fefc7/AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] /home/cnku/.gradle/caches/transforms-2/files-2.1/a398823713119f871216e9573c0fefc7/AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /home/cnku/.gradle/caches/transforms-2/files-2.1/a74aeebe1067337f9040dd9453026981/AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /home/cnku/.gradle/caches/transforms-2/files-2.1/a74aeebe1067337f9040dd9453026981/AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] /home/cnku/.gradle/caches/transforms-2/files-2.1/a9050a5045ffba88e60cb6dc949e6175/AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] /home/cnku/.gradle/caches/transforms-2/files-2.1/a9050a5045ffba88e60cb6dc949e6175/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /home/cnku/.gradle/caches/transforms-2/files-2.1/4fba50714d1b5b95dadef09c4fc6ad95/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /home/cnku/.gradle/caches/transforms-2/files-2.1/4fba50714d1b5b95dadef09c4fc6ad95/AndroidManifest.xml:20:5-44
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0-beta01] /home/cnku/.gradle/caches/transforms-2/files-2.1/4e36e75624ade5f8874a87a698103916/AndroidManifest.xml:20:5-44
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0-beta01] /home/cnku/.gradle/caches/transforms-2/files-2.1/4e36e75624ade5f8874a87a698103916/AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] /home/cnku/.gradle/caches/transforms-2/files-2.1/94928fcc03ac48b4979585d520e349b6/AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] /home/cnku/.gradle/caches/transforms-2/files-2.1/94928fcc03ac48b4979585d520e349b6/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /home/cnku/.gradle/caches/transforms-2/files-2.1/500940f8db2bcc60a553ec8c264e73a6/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /home/cnku/.gradle/caches/transforms-2/files-2.1/500940f8db2bcc60a553ec8c264e73a6/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] /home/cnku/.gradle/caches/transforms-2/files-2.1/795c3b77daa74e0534a6b0ae3b112d25/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] /home/cnku/.gradle/caches/transforms-2/files-2.1/795c3b77daa74e0534a6b0ae3b112d25/AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.0.0] /home/cnku/.gradle/caches/transforms-2/files-2.1/37b98cb6285da9c730a4c3c79d9220b3/AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.0.0] /home/cnku/.gradle/caches/transforms-2/files-2.1/37b98cb6285da9c730a4c3c79d9220b3/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.2.0-alpha01] /home/cnku/.gradle/caches/transforms-2/files-2.1/f26b169972cf005c1b16742373e7d476/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.2.0-alpha01] /home/cnku/.gradle/caches/transforms-2/files-2.1/f26b169972cf005c1b16742373e7d476/AndroidManifest.xml:20:5-44
+MERGED from [androidx.savedstate:savedstate:1.0.0-beta01] /home/cnku/.gradle/caches/transforms-2/files-2.1/dda854d932a4297b2da0ad078eb50cf3/AndroidManifest.xml:20:5-44
+MERGED from [androidx.savedstate:savedstate:1.0.0-beta01] /home/cnku/.gradle/caches/transforms-2/files-2.1/dda854d932a4297b2da0ad078eb50cf3/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.2.0-alpha01] /home/cnku/.gradle/caches/transforms-2/files-2.1/e03e119e48bd43adcf412394c6b0a72d/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.2.0-alpha01] /home/cnku/.gradle/caches/transforms-2/files-2.1/e03e119e48bd43adcf412394c6b0a72d/AndroidManifest.xml:20:5-44
+INJECTED from /home/cnku/Parcher/app/src/main/AndroidManifest.xml
+INJECTED from /home/cnku/Parcher/app/src/main/AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from /home/cnku/Parcher/app/src/main/AndroidManifest.xml
+		ADDED from /home/cnku/Parcher/app/src/main/AndroidManifest.xml
+		INJECTED from /home/cnku/Parcher/app/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /home/cnku/Parcher/app/src/main/AndroidManifest.xml
+		ADDED from /home/cnku/Parcher/app/src/main/AndroidManifest.xml
+		INJECTED from /home/cnku/Parcher/app/src/main/AndroidManifest.xml
