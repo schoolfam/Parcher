@@ -4,12 +4,12 @@
         "source": "/home/cnku/.gradle/caches/transforms-2/files-2.1/75cf028d0de4859a9a63c776759561e5/res/layout-sw600dp-v13/design_layout_snackbar.xml"
     },
     {
-        "merged": "/home/cnku/Parcher/app/build/intermediates/res/merged/debug/menu_activity_main_drawer.xml.flat",
-        "source": "/home/cnku/Parcher/app/src/main/res/menu/activity_main_drawer.xml"
-    },
-    {
         "merged": "/home/cnku/Parcher/app/build/intermediates/res/merged/debug/anim_btn_checkbox_to_unchecked_check_path_merged_animation.xml.flat",
         "source": "/home/cnku/.gradle/caches/transforms-2/files-2.1/c4f3a2337948fe9493810e1d5b0dce00/res/anim/btn_checkbox_to_unchecked_check_path_merged_animation.xml"
+    },
+    {
+        "merged": "/home/cnku/Parcher/app/build/intermediates/res/merged/debug/menu_activity_main_drawer.xml.flat",
+        "source": "/home/cnku/Parcher/app/src/main/res/menu/activity_main_drawer.xml"
     },
     {
         "merged": "/home/cnku/Parcher/app/build/intermediates/res/merged/debug/color_mtrl_btn_text_color_selector.xml.flat",
@@ -28,12 +28,12 @@
         "source": "/home/cnku/.gradle/caches/transforms-2/files-2.1/75cf028d0de4859a9a63c776759561e5/res/layout/design_navigation_menu_item.xml"
     },
     {
-        "merged": "/home/cnku/Parcher/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_textfield_activated_mtrl_alpha.9.png.flat",
-        "source": "/home/cnku/.gradle/caches/transforms-2/files-2.1/c4f3a2337948fe9493810e1d5b0dce00/res/drawable-xhdpi-v4/abc_textfield_activated_mtrl_alpha.9.png"
-    },
-    {
         "merged": "/home/cnku/Parcher/app/build/intermediates/res/merged/debug/drawable_abc_seekbar_track_material.xml.flat",
         "source": "/home/cnku/.gradle/caches/transforms-2/files-2.1/c4f3a2337948fe9493810e1d5b0dce00/res/drawable/abc_seekbar_track_material.xml"
+    },
+    {
+        "merged": "/home/cnku/Parcher/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_textfield_activated_mtrl_alpha.9.png.flat",
+        "source": "/home/cnku/.gradle/caches/transforms-2/files-2.1/c4f3a2337948fe9493810e1d5b0dce00/res/drawable-xhdpi-v4/abc_textfield_activated_mtrl_alpha.9.png"
     },
     {
         "merged": "/home/cnku/Parcher/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4_abc_text_select_handle_left_mtrl_light.png.flat",
@@ -88,12 +88,12 @@
         "source": "/home/cnku/.gradle/caches/transforms-2/files-2.1/c4f3a2337948fe9493810e1d5b0dce00/res/drawable-hdpi-v4/abc_ic_star_black_36dp.png"
     },
     {
-        "merged": "/home/cnku/Parcher/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_abc_tab_indicator_mtrl_alpha.9.png.flat",
-        "source": "/home/cnku/.gradle/caches/transforms-2/files-2.1/c4f3a2337948fe9493810e1d5b0dce00/res/drawable-hdpi-v4/abc_tab_indicator_mtrl_alpha.9.png"
-    },
-    {
         "merged": "/home/cnku/Parcher/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4_abc_btn_check_to_on_mtrl_015.png.flat",
         "source": "/home/cnku/.gradle/caches/transforms-2/files-2.1/c4f3a2337948fe9493810e1d5b0dce00/res/drawable-xxxhdpi-v4/abc_btn_check_to_on_mtrl_015.png"
+    },
+    {
+        "merged": "/home/cnku/Parcher/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_abc_tab_indicator_mtrl_alpha.9.png.flat",
+        "source": "/home/cnku/.gradle/caches/transforms-2/files-2.1/c4f3a2337948fe9493810e1d5b0dce00/res/drawable-hdpi-v4/abc_tab_indicator_mtrl_alpha.9.png"
     },
     {
         "merged": "/home/cnku/Parcher/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_abc_ic_menu_selectall_mtrl_alpha.png.flat",
@@ -120,12 +120,12 @@
         "source": "/home/cnku/.gradle/caches/transforms-2/files-2.1/c4f3a2337948fe9493810e1d5b0dce00/res/drawable-xxxhdpi-v4/abc_scrubber_control_to_pressed_mtrl_000.png"
     },
     {
-        "merged": "/home/cnku/Parcher/app/build/intermediates/res/merged/debug/color_mtrl_calendar_selected_range.xml.flat",
-        "source": "/home/cnku/.gradle/caches/transforms-2/files-2.1/75cf028d0de4859a9a63c776759561e5/res/color/mtrl_calendar_selected_range.xml"
-    },
-    {
         "merged": "/home/cnku/Parcher/app/build/intermediates/res/merged/debug/interpolator_btn_radio_to_off_mtrl_animation_interpolator_0.xml.flat",
         "source": "/home/cnku/.gradle/caches/transforms-2/files-2.1/c4f3a2337948fe9493810e1d5b0dce00/res/interpolator/btn_radio_to_off_mtrl_animation_interpolator_0.xml"
+    },
+    {
+        "merged": "/home/cnku/Parcher/app/build/intermediates/res/merged/debug/color_mtrl_calendar_selected_range.xml.flat",
+        "source": "/home/cnku/.gradle/caches/transforms-2/files-2.1/75cf028d0de4859a9a63c776759561e5/res/color/mtrl_calendar_selected_range.xml"
     },
     {
         "merged": "/home/cnku/Parcher/app/build/intermediates/res/merged/debug/drawable-v21_avd_show_password.xml.flat",
@@ -192,16 +192,16 @@
         "source": "/home/cnku/.gradle/caches/transforms-2/files-2.1/c4f3a2337948fe9493810e1d5b0dce00/res/drawable-ldrtl-xxxhdpi-v17/abc_ic_menu_copy_mtrl_am_alpha.png"
     },
     {
-        "merged": "/home/cnku/Parcher/app/build/intermediates/res/merged/debug/drawable_background_rectangle.png.flat",
-        "source": "/home/cnku/Parcher/app/src/main/res/drawable/background_rectangle.png"
+        "merged": "/home/cnku/Parcher/app/build/intermediates/res/merged/debug/mipmap-mdpi_ic_launcher_round.png.flat",
+        "source": "/home/cnku/Parcher/app/src/main/res/mipmap-mdpi/ic_launcher_round.png"
     },
     {
         "merged": "/home/cnku/Parcher/app/build/intermediates/res/merged/debug/drawable-ldrtl-xhdpi-v17_abc_ic_menu_copy_mtrl_am_alpha.png.flat",
         "source": "/home/cnku/.gradle/caches/transforms-2/files-2.1/c4f3a2337948fe9493810e1d5b0dce00/res/drawable-ldrtl-xhdpi-v17/abc_ic_menu_copy_mtrl_am_alpha.png"
     },
     {
-        "merged": "/home/cnku/Parcher/app/build/intermediates/res/merged/debug/mipmap-mdpi_ic_launcher_round.png.flat",
-        "source": "/home/cnku/Parcher/app/src/main/res/mipmap-mdpi/ic_launcher_round.png"
+        "merged": "/home/cnku/Parcher/app/build/intermediates/res/merged/debug/drawable_background_rectangle.png.flat",
+        "source": "/home/cnku/Parcher/app/src/main/res/drawable/background_rectangle.png"
     },
     {
         "merged": "/home/cnku/Parcher/app/build/intermediates/res/merged/debug/drawable_abc_list_selector_background_transition_holo_dark.xml.flat",
@@ -344,12 +344,12 @@
         "source": "/home/cnku/Parcher/app/src/main/res/drawable/ic_launcher_background.xml"
     },
     {
-        "merged": "/home/cnku/Parcher/app/build/intermediates/res/merged/debug/layout_design_text_input_end_icon.xml.flat",
-        "source": "/home/cnku/.gradle/caches/transforms-2/files-2.1/75cf028d0de4859a9a63c776759561e5/res/layout/design_text_input_end_icon.xml"
-    },
-    {
         "merged": "/home/cnku/Parcher/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4_abc_ic_star_half_black_48dp.png.flat",
         "source": "/home/cnku/.gradle/caches/transforms-2/files-2.1/c4f3a2337948fe9493810e1d5b0dce00/res/drawable-xxxhdpi-v4/abc_ic_star_half_black_48dp.png"
+    },
+    {
+        "merged": "/home/cnku/Parcher/app/build/intermediates/res/merged/debug/layout_design_text_input_end_icon.xml.flat",
+        "source": "/home/cnku/.gradle/caches/transforms-2/files-2.1/75cf028d0de4859a9a63c776759561e5/res/layout/design_text_input_end_icon.xml"
     },
     {
         "merged": "/home/cnku/Parcher/app/build/intermediates/res/merged/debug/drawable_mtrl_dialog_background.xml.flat",

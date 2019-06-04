@@ -1,15 +1,15 @@
 <component name="libraryTable">
   <library name="Gradle: androidx.fragment:fragment:1.1.0-alpha08@aar">
     <ANNOTATIONS>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/157eeacdf07dbad5243399f678744ea4/annotations.zip!/" />
+      <root url="jar://$PROJECT_DIR$/../.gradle/caches/transforms-2/files-2.1/3e8efa82b30a7f7393eefe7b22fbc18b/annotations.zip!/" />
     </ANNOTATIONS>
     <CLASSES>
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/157eeacdf07dbad5243399f678744ea4/res" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/157eeacdf07dbad5243399f678744ea4/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/../.gradle/caches/transforms-2/files-2.1/3e8efa82b30a7f7393eefe7b22fbc18b/res" />
+      <root url="jar://$PROJECT_DIR$/../.gradle/caches/transforms-2/files-2.1/3e8efa82b30a7f7393eefe7b22fbc18b/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
-      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/androidx.fragment/fragment/1.1.0-alpha08/114193a129fb87a519110c428e281dde056166ac/fragment-1.1.0-alpha08-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../.gradle/caches/modules-2/files-2.1/androidx.fragment/fragment/1.1.0-alpha08/114193a129fb87a519110c428e281dde056166ac/fragment-1.1.0-alpha08-sources.jar!/" />
     </SOURCES>
   </library>
 </component>
