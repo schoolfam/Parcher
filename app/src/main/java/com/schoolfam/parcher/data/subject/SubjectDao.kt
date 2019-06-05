@@ -7,7 +7,7 @@ import androidx.room.*
 interface SubjectDao {
 
     @Query("SELECT * FROM subjects WHERE id = :subjectId LIMIT 1")
-    fun getSubjectById(subjectId:String): LiveData<Subject>
+    fun getSubjectById(subjectId:Long): LiveData<Subject>
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     fun insertSubject(subject: Subject):Long
@@ -19,6 +19,6 @@ interface SubjectDao {
     fun deleteSubject(subject: Subject):Int
 
     @Query("SELECT * FROM subjects ORDER BY id")
-    fun getAllSubjects(subject: Subject): LiveData<List<Subject>>
+    fun getAllSubjects(): LiveData<List<Subject>>
 
 }

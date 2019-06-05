@@ -5,6 +5,6 @@ import androidx.room.Entity
 import androidx.room.PrimaryKey
 
 @Entity(tableName = "subjects")
-data class Subject(@PrimaryKey @ColumnInfo(name = "id") val id: Int,
+data class Subject(@PrimaryKey @ColumnInfo(name = "id") val id: Long,
               @ColumnInfo(name = "name") val subjectName: String
 )

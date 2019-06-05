@@ -7,7 +7,7 @@ import androidx.room.*
 interface SectionDao {
 
     @Query("SELECT * FROM sections WHERE id = :sectionId LIMIT 1")
-    fun getSectionById(sectionId:String): LiveData<Section>
+    fun getSectionById(sectionId:Long): LiveData<Section>
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     fun insertSection(section: Section):Long
@@ -19,6 +19,6 @@ interface SectionDao {
     fun deleteSection(section: Section):Int
 
     @Query("SELECT * FROM sections ORDER BY id")
-    fun getAllSections(section: Section): LiveData<List<Section>>
+    fun getAllSections(): LiveData<List<Section>>
 
 }

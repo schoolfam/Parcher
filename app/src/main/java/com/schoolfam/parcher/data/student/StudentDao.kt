@@ -7,7 +7,7 @@ import androidx.room.*
 interface StudentDao {
 
     @Query("SELECT * FROM students WHERE id = :studentId LIMIT 1")
-    fun getStudentById(studentId:String): LiveData<Student>
+    fun getStudentById(studentId:Long): LiveData<Student>
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     fun insertStudent(student: Student):Long
@@ -19,6 +19,6 @@ interface StudentDao {
     fun deleteStudent(student: Student):Int
 
     @Query("SELECT * FROM students ORDER BY id")
-    fun getAllStudents(student: Student): LiveData<List<Student>>
+    fun getAllStudents(): LiveData<List<Student>>
 
 }

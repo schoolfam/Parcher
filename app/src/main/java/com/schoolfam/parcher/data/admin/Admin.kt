@@ -7,14 +7,12 @@ import androidx.room.PrimaryKey
 import com.schoolfam.parcher.data.user.User
 
 @Entity(tableName = "admins",
-    foreignKeys = arrayOf(
-        ForeignKey(
-            entity = User::class,
-            parentColumns = arrayOf("id"),
-            childColumns = arrayOf("user_id"),
-            onDelete = ForeignKey.CASCADE)
-    )
+    foreignKeys = [ForeignKey(
+        entity = User::class,
+        parentColumns = arrayOf("id"),
+        childColumns = arrayOf("user_id"),
+        onDelete = ForeignKey.CASCADE)]
 )
-data class Admin(@PrimaryKey @ColumnInfo(name = "id") val id: Int,
-            @ColumnInfo(name = "userId") val userId: Int
+data class Admin(@PrimaryKey @ColumnInfo(name = "id") val id: Long,
+            @ColumnInfo(name = "user_id") val userId: Long
 )

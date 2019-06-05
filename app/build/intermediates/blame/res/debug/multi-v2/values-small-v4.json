@@ -4,7 +4,7 @@
             "outputFile": "/home/cnku/Parcher/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-small-v4/values-small-v4.xml",
             "map": [
                 {
-                    "source": "/home/cnku/.gradle/caches/transforms-2/files-2.1/75cf028d0de4859a9a63c776759561e5/res/values-small-v4/values-small-v4.xml",
+                    "source": "/home/cnku/.gradle/caches/transforms-2/files-2.1/7f041b270a1972f09769cddb2c701dd3/res/values-small-v4/values-small-v4.xml",
                     "from": {
                         "startLines": "2,3,4,5",
                         "startColumns": "4,4,4,4",

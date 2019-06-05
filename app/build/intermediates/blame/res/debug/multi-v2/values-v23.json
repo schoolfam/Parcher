@@ -4,7 +4,7 @@
             "outputFile": "/home/cnku/Parcher/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v23/values-v23.xml",
             "map": [
                 {
-                    "source": "/home/cnku/.gradle/caches/transforms-2/files-2.1/c4f3a2337948fe9493810e1d5b0dce00/res/values-v23/values-v23.xml",
+                    "source": "/home/cnku/.gradle/caches/transforms-2/files-2.1/4f80ce94b287ee08a10b460bdedfe1b2/res/values-v23/values-v23.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,20,34,35,36,37,41,42,43,44",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -15,7 +15,7 @@
                     }
                 },
                 {
-                    "source": "/home/cnku/.gradle/caches/transforms-2/files-2.1/75cf028d0de4859a9a63c776759561e5/res/values-v23/values-v23.xml",
+                    "source": "/home/cnku/.gradle/caches/transforms-2/files-2.1/7f041b270a1972f09769cddb2c701dd3/res/values-v23/values-v23.xml",
                     "from": {
                         "startLines": "2,6,9,12,16,19",
                         "startColumns": "4,4,4,4,4,4",
@@ -34,7 +34,7 @@
                     }
                 },
                 {
-                    "source": "/home/cnku/.gradle/caches/transforms-2/files-2.1/932fcf25ce9c88d700199ef86e5f70bc/res/values-v23/values-v23.xml",
+                    "source": "/home/cnku/.gradle/caches/transforms-2/files-2.1/c1555bb318ed69b4eb944411f37c4fe6/res/values-v23/values-v23.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

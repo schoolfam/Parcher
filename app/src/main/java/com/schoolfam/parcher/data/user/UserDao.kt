@@ -6,8 +6,11 @@ import androidx.room.*
 @Dao
 interface UserDao {
 
-    @Query("SELECT * FROM subjects WHERE id = :userId LIMIT 1")
-    fun getUserById(userId:String): LiveData<User>
+    @Query("SELECT * FROM users WHERE id = :userId LIMIT 1")
+    fun getUserById(userId:Long): LiveData<User>
+
+    @Query("SELECT * FROM users WHERE id = :userId LIMIT 1")
+    fun getUserByEmail(userId:String): LiveData<User>
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     fun insertUser(user: User):Long
@@ -19,6 +22,6 @@ interface UserDao {
     fun deleteUser(user: User):Int
 
     @Query("SELECT * FROM users ORDER BY id")
-    fun getAllUsers(user: User): LiveData<List<User>>
+    fun getAllUsers(): LiveData<List<User>>
 
 }

@@ -7,7 +7,7 @@ import androidx.room.*
 interface AdminDao {
 
     @Query("SELECT * FROM admins WHERE id = :adminId LIMIT 1")
-    fun getAdminById(adminId:String): LiveData<Admin>
+    fun getAdminById(adminId:Long): LiveData<Admin>
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     fun insertAdmin(admin: Admin):Long
@@ -19,6 +19,6 @@ interface AdminDao {
     fun deleteAdmin(admin: Admin):Int
 
     @Query("SELECT * FROM admins ORDER BY id")
-    fun getAllAdmins(admin: Admin): LiveData<List<Admin>>
+    fun getAllAdmins(): LiveData<List<Admin>>
 
 }

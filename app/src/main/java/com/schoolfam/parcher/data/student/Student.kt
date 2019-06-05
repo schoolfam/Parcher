@@ -8,18 +8,17 @@ import com.schoolfam.parcher.data.parent.Parent
 import com.schoolfam.parcher.data.user.User
 
 @Entity(tableName = "students",
-    foreignKeys = arrayOf(
-        ForeignKey(entity = Parent::class,
+    foreignKeys = [ForeignKey(entity = Parent::class,
         parentColumns = arrayOf("id"),
-        childColumns = arrayOf("parentId")
-        ),
-        ForeignKey(entity = User::class,
-            parentColumns = arrayOf("id"),
-            childColumns = arrayOf("userId"))
-    )
+        childColumns = arrayOf("parent_id")
+    ), ForeignKey(entity = User::class,
+        parentColumns = arrayOf("id"),
+        childColumns = arrayOf("user_id"))]
 )
-data class Student(@PrimaryKey @ColumnInfo(name = "id") val id: Int,
-              @ColumnInfo(name = "user_id") val userId: Int,
-              @ColumnInfo(name = "parent_id") val parentId: Int
+data class Student(
+    @PrimaryKey @ColumnInfo(name = "id") val id: Long,
+    @ColumnInfo(name = "user_id") val userId: Long,
+    @ColumnInfo(name = "parent_id") val parentId: Long,
+    @ColumnInfo(name = "section_id") val sectionId:Long
 
 )

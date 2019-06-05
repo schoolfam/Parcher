@@ -7,7 +7,7 @@ import androidx.room.*
 interface RoleDao {
 
     @Query("SELECT * FROM roles WHERE id = :roleId LIMIT 1")
-    fun getRoleById(roleId:String): LiveData<Role>
+    fun getRoleById(roleId:Long): LiveData<Role>
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     fun insertRole(role: Role):Long
@@ -19,6 +19,6 @@ interface RoleDao {
     fun deleteRole(role: Role):Int
 
     @Query("SELECT * FROM roles ORDER BY id")
-    fun getAllRoles(role: Role): LiveData<List<Role>>
+    fun getAllRoles(): LiveData<List<Role>>
 
 }

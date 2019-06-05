@@ -7,7 +7,7 @@ import androidx.room.*
 interface AttendanceDao {
 
     @Query("SELECT * FROM attendances WHERE id = :attendanceId LIMIT 1")
-    fun getAttendanceById(attendanceId:String): LiveData<Attendance>
+    fun getAttendanceById(attendanceId:Long): LiveData<Attendance>
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     fun insertAttendance(attendance: Attendance):Long
@@ -19,6 +19,6 @@ interface AttendanceDao {
     fun deleteAttendance(attendance: Attendance):Int
 
     @Query("SELECT * FROM attendances ORDER BY id")
-    fun getAllAttendances(attendance: Attendance): LiveData<List<Attendance>>
+    fun getAllAttendances(): LiveData<List<Attendance>>
 
 }

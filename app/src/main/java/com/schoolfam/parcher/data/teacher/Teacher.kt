@@ -19,7 +19,7 @@ import com.schoolfam.parcher.data.user.User
             onDelete = ForeignKey.CASCADE)]
 )
 data class Teacher(
-    @PrimaryKey @ColumnInfo(name = "id") val id: Int,
-    @ColumnInfo(name = "user_id") val userId: Int,
-    @ColumnInfo(name = "grade_id") val gradeId:Int
+    @PrimaryKey @ColumnInfo(name = "id") val id: Long,
+    @ColumnInfo(name = "user_id") val userId: Long,
+    @ColumnInfo(name = "section_id") val sectionId:Long
 )

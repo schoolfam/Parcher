@@ -7,7 +7,7 @@ import androidx.room.*
 interface ParentDao {
 
     @Query("SELECT * FROM parents WHERE id = :parentId LIMIT 1")
-    fun getParentById(parentId:String): LiveData<Parent>
+    fun getParentById(parentId:Long): LiveData<Parent>
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     fun insertParent(parent: Parent):Long
@@ -19,6 +19,6 @@ interface ParentDao {
     fun deleteParent(parent: Parent):Int
 
     @Query("SELECT * FROM parents ORDER BY id")
-    fun getAllParents(parent: Parent): LiveData<List<Parent>>
+    fun getAllParents(): LiveData<List<Parent>>
 
 }

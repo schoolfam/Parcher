@@ -7,7 +7,7 @@ import androidx.room.*
 interface AssessmentDao {
 
     @Query("SELECT * FROM assessments WHERE id = :assessmentId LIMIT 1")
-    fun getAssessmentById(assessmentId:String): LiveData<Assessment>
+    fun getAssessmentById(assessmentId:Long): LiveData<Assessment>
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     fun insertAssessment(assessment: Assessment):Long
@@ -19,6 +19,6 @@ interface AssessmentDao {
     fun deleteAssessment(assessment: Assessment):Int
 
     @Query("SELECT * FROM assessments ORDER BY id")
-    fun getAllAssessments(assessment: Assessment): LiveData<List<Assessment>>
+    fun getAllAssessments(): LiveData<List<Assessment>>
 
 }

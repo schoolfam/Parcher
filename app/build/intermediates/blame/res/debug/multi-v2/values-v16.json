@@ -4,7 +4,7 @@
             "outputFile": "/home/cnku/Parcher/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v16/values-v16.xml",
             "map": [
                 {
-                    "source": "/home/cnku/.gradle/caches/transforms-2/files-2.1/c4f3a2337948fe9493810e1d5b0dce00/res/values-v16/values-v16.xml",
+                    "source": "/home/cnku/.gradle/caches/transforms-2/files-2.1/4f80ce94b287ee08a10b460bdedfe1b2/res/values-v16/values-v16.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -23,7 +23,7 @@
                     }
                 },
                 {
-                    "source": "/home/cnku/.gradle/caches/transforms-2/files-2.1/c4d0a3788a5a3cafbbb55ba6af6d18e8/res/values-v16/values-v16.xml",
+                    "source": "/home/cnku/.gradle/caches/transforms-2/files-2.1/c6abdf7f3b8843521bd4abd354c04a39/res/values-v16/values-v16.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
