@@ -9,6 +9,11 @@ interface StudentDao {
     @Query("SELECT * FROM students WHERE id = :studentId LIMIT 1")
     fun getStudentById(studentId:Long): LiveData<Student>
 
+    @Query("SELECT * FROM students WHERE section_id = :sectionId ")
+    fun getStudentBySection(sectionId:Long): LiveData<List<Student>>
+
+
+
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     fun insertStudent(student: Student):Long
 
