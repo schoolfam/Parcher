@@ -89,8 +89,8 @@ abstract class ParcherDatabase : RoomDatabase() {
                                 val assessmentTypeDao = db.assessmentTypeDao()
                                 val roleDao = db.roleDao()
 
-                                val user = User(1,"Sinkumen","Asefa","Cnku","123456","sinkumen@gmail.com",1,"Male")
-                                val admin = Admin(1,userDao.insertUser(user))
+                                val user = User("Sinkumen","Asefa","Cnku","sinkumen@gmail.com","123456",1,"Male")
+                                val admin = Admin(userDao.insertUser(user))
                                 adminDao.insertAdmin(admin)
                                 print("User Added-------------------------------------------------------------------------------------------")
 

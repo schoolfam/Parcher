@@ -11,9 +11,13 @@ import com.google.android.material.navigation.NavigationView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import android.view.Menu
+import androidx.fragment.app.Fragment
+import com.schoolfam.parcher.Fragments.AdminFragments.AddParentFragment
+import com.schoolfam.parcher.Fragments.AdminFragments.AddStudentsFragment
+import com.schoolfam.parcher.Fragments.AdminFragments.AddTeachersFragment
 
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
-
+    lateinit var fragment:Fragment
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -64,15 +68,17 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         // Handle navigation view item clicks here.
+
+
         when (item.itemId) {
-            R.id.nav_home -> {
-                // Handle the camera action
+            R.id.reg_teacher -> {
+                fragment= AddTeachersFragment()
             }
-            R.id.nav_gallery -> {
-
+            R.id.reg_parent -> {
+                fragment= AddParentFragment()
             }
-            R.id.nav_slideshow -> {
-
+            R.id.reg_student -> {
+                fragment= AddStudentsFragment()
             }
             R.id.nav_tools -> {
 
@@ -83,7 +89,13 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             R.id.nav_send -> {
 
             }
+
         }
+
+        val fragmentTransaction = supportFragmentManager.beginTransaction()
+        fragmentTransaction.replace(R.id.frame_layout, fragment)
+        fragmentTransaction.commit()
+
         val drawerLayout: DrawerLayout = findViewById(R.id.drawer_layout)
         drawerLayout.closeDrawer(GravityCompat.START)
         return true

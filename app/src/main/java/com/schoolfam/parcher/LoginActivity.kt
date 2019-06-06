@@ -54,7 +54,8 @@ class LoginActivity : AppCompatActivity() {
             userViewModel.findUserById(users.userId).observe(this,
                 Observer {
                         admin -> admin?.let{adminUser = admin
-                    Toast.makeText(this,"The Name of the Admin Is: "+ adminUser.fname,Toast.LENGTH_LONG).show()}
+                    //Toast.makeText(this,"The Name of the Admin Is: "+ adminUser.fname+" id: "+adminUser.id,Toast.LENGTH_LONG).show()
+                }
                 })
         }
 

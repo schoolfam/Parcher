@@ -8,10 +8,10 @@ import com.schoolfam.parcher.data.teacher.TeacherDao
 class TeacherRepository(private val teacherDao: TeacherDao) {
 
     fun allTeachers(): LiveData<List<Teacher>> =  teacherDao.getAllTeachers()
-    fun ParentsById(id:Long): LiveData<Teacher> = teacherDao.getTeacherById(id)
+    fun teacherById(id:Long): LiveData<Teacher> = teacherDao.getTeacherById(id)
 
-    fun insertTeacher(teacher: Teacher){
-        teacherDao.insertTeacher(teacher)
+    fun insertTeacher(teacher: Teacher):Long{
+        return teacherDao.insertTeacher(teacher)
     }
     fun updateTeacher(teacher: Teacher){
         teacherDao.updateTeacher(teacher)

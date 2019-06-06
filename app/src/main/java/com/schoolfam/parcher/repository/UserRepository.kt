@@ -10,8 +10,8 @@ class UserRepository(private val userDao: UserDao) {
     fun userById(id:Long):LiveData<User> = userDao.getUserById(id)
     fun userByEmail(email:String):LiveData<User> = userDao.getUserByEmail(email)
 
-    fun insertUser(user: User){
-        userDao.insertUser(user)
+    fun insertUser(user: User):Long{
+        return userDao.insertUser(user)
     }
     fun updateUser(user: User){
         userDao.updateUser(user)

@@ -4,9 +4,9 @@ import androidx.lifecycle.LiveData
 import com.schoolfam.parcher.data.parent.Parent
 import com.schoolfam.parcher.data.parent.ParentDao
 
-class ParentRepositorty(private val parentDao: ParentDao) {
+class ParentRepository(private val parentDao: ParentDao) {
     fun allParents(): LiveData<List<Parent>> =  parentDao.getAllParents()
-    fun ParentsById(id:Long): LiveData<Parent> = parentDao.getParentById(id)
+    fun parentsById(id:Long): LiveData<Parent> = parentDao.getParentById(id)
 
     fun insertParent(parent: Parent){
         parentDao.insertParent(parent)

@@ -1,0 +1,10 @@
+package com.schoolfam.parcher.repository
+
+import androidx.lifecycle.LiveData
+import com.schoolfam.parcher.data.section.Section
+import com.schoolfam.parcher.data.section.SectionDao
+
+class SectionRepository(private val sectionDao: SectionDao) {
+
+    fun allSection(): LiveData<List<Section>> =  sectionDao.getAllSections()
+}

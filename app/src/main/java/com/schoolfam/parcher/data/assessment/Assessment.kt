@@ -6,6 +6,7 @@ import androidx.room.ForeignKey
 import androidx.room.PrimaryKey
 import com.schoolfam.parcher.data.student.Student
 import com.schoolfam.parcher.data.subject.Subject
+import java.io.Serializable
 
 @Entity(tableName = "assessments",
     foreignKeys = [ForeignKey(entity = Assessment::class,
@@ -16,9 +17,12 @@ import com.schoolfam.parcher.data.subject.Subject
         parentColumns = arrayOf("id"),
         childColumns = arrayOf("subject_id"))]
 )
-data class Assessment(@PrimaryKey @ColumnInfo(name = "id") val id: Long,
+data class Assessment(
                  @ColumnInfo(name = "subject_id") val subjectId: Long,
                  @ColumnInfo(name = "student_id") val studentId: Long,
                  @ColumnInfo(name = "assessment_type_id") val assessmentTypeId: Long,
                  @ColumnInfo(name = "score") val score: Double
-)
+): Serializable{
+    @PrimaryKey(autoGenerate = true)
+    @ColumnInfo(name = "id") var id: Long? = null
+}

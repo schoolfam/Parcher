@@ -14,7 +14,7 @@ class UserViewModel(application:Application):AndroidViewModel(application) {
 
     private val userRepository: UserRepository
     val allUsers: LiveData<List<User>>
-
+    var currentUser:Long = 0
     init {
         val userDao = ParcherDatabase.getInstance(application).userDao()
         userRepository = UserRepository(userDao)
@@ -28,8 +28,8 @@ class UserViewModel(application:Application):AndroidViewModel(application) {
         return userRepository.userByEmail(email)
     }
 
-    fun insertUser(user:User) =  viewModelScope.launch (Dispatchers.IO){
-        userRepository.insertUser(user)
+    fun insertUser(user:User):Long{
+        return userRepository.insertUser(user)
     }
 
     fun updateUser(user:User) =  viewModelScope.launch (Dispatchers.IO){
