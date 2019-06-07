@@ -22,17 +22,6 @@ import com.schoolfam.parcher.viewModel.*
 import kotlinx.android.synthetic.main.fragment_add_parent.view.*
 import kotlinx.android.synthetic.main.fragment_add_teachers.view.*
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
-
-/**
- * A simple [Fragment] subclass.
- * Use the [AddParentFragment.newInstance] factory method to
- * create an instance of this fragment.
- *
- */
 class AddParentFragment : Fragment() {
     private lateinit var studentViewModel: StudentViewModel
     private lateinit var parntViewModel: ParentViewModel
@@ -126,8 +115,11 @@ class AddParentFragment : Fragment() {
                     Snackbar.make(it, "You Have Successfully Registered PARENT: "+parentFirstNameEditText.text.toString(),Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show()
 
-                    val loginIntent = Intent(it.context, MainActivity::class.java)
-                    startActivity(loginIntent)
+                    val fragmentTransaction = activity!!.supportFragmentManager.beginTransaction()
+                    val fragment = AddParentFragment()
+                    fragmentTransaction.replace(R.id.frame_layout, fragment)
+                    fragmentTransaction.commit()
+
 
 
                 }

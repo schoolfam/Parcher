@@ -13,6 +13,7 @@ import androidx.lifecycle.ViewModelProviders
 import com.google.android.material.snackbar.Snackbar
 import com.schoolfam.parcher.MainActivity
 
+
 import com.schoolfam.parcher.R
 import com.schoolfam.parcher.data.section.Section
 import com.schoolfam.parcher.data.teacher.Teacher
@@ -117,8 +118,12 @@ class AddTeachersFragment : Fragment() {
                                 "\nFor Section: "+(teacherSectionSpinner.selectedItem as Section).sectionName, Snackbar.LENGTH_LONG)
                             .setAction("Action", null).show()
 
-                        val loginIntent = Intent(it.context, MainActivity::class.java)
-                        startActivity(loginIntent)
+
+
+                        val fragmentTransaction = activity!!.supportFragmentManager.beginTransaction()
+                        val fragment = AddTeachersFragment()
+                        fragmentTransaction.replace(R.id.frame_layout, fragment)
+                        fragmentTransaction.commit()
 
 
                     }

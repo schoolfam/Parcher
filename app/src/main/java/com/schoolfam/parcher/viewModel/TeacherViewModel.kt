@@ -22,7 +22,7 @@ class TeacherViewModel(application: Application):AndroidViewModel(application) {
         allTeachers = teacherRepository.allTeachers()
     }
 
-    fun findTeacherById(id:Long): LiveData<Teacher> {
+    fun findTeacherByUserId(id:Long): LiveData<Teacher> {
         return teacherRepository.teacherById(id)
     }
 

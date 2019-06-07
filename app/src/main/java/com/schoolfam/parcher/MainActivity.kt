@@ -11,10 +11,12 @@ import com.google.android.material.navigation.NavigationView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import android.view.Menu
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.schoolfam.parcher.Fragments.AdminFragments.AddParentFragment
 import com.schoolfam.parcher.Fragments.AdminFragments.AddStudentsFragment
 import com.schoolfam.parcher.Fragments.AdminFragments.AddTeachersFragment
+import com.schoolfam.parcher.data.user.User
 
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
     lateinit var fragment:Fragment
@@ -39,6 +41,10 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         toggle.syncState()
 
         navView.setNavigationItemSelectedListener(this)
+
+
+        val admin:User? = intent.extras.getSerializable("currentAdmin") as? User
+        Toast.makeText(this,"Current User Name: "+admin!!.fname,Toast.LENGTH_LONG).show()
     }
 
     override fun onBackPressed() {

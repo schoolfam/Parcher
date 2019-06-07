@@ -6,8 +6,10 @@ import androidx.room.*
 @Dao
 interface TeacherDao {
 
-    @Query("SELECT * FROM teachers WHERE id = :teacherId LIMIT 1")
+    @Query("SELECT * FROM teachers WHERE user_id = :teacherId LIMIT 1")
     fun getTeacherById(teacherId:Long): LiveData<Teacher>
+
+
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     fun insertTeacher(teacher: Teacher):Long

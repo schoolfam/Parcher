@@ -127,14 +127,19 @@ class AddStudentsFragment : Fragment() {
 
 
                 ioThread{
-                    val newStudent: Student = Student( userViewModel.insertUser(newUser),1,sectionId)
+                    val newStudent= Student( userViewModel.insertUser(newUser),parenId,sectionId)
                     studentViewModel.insertStudent(newStudent)
 
-                    Snackbar.make(it, "You Have Successfully Registered TEACHER: "+studentFirstNameEditText.text.toString(), Snackbar.LENGTH_LONG)
+                    Snackbar.make(it, "You Have Successfully Registered STUDENT: "+studentFirstNameEditText.text.toString(), Snackbar.LENGTH_LONG)
+                        .setAction("Action", null).show()
+                    Snackbar.make(it, "Section Id: "+newStudent.sectionId, Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show()
 
-//                    val loginIntent = Intent(it.context, MainActivity::class.java)
-//                    startActivity(loginIntent)
+                    val fragmentTransaction = activity!!.supportFragmentManager.beginTransaction()
+                    val fragment = AddStudentsFragment()
+                    fragmentTransaction.replace(R.id.frame_layout, fragment)
+                    fragmentTransaction.commit()
+
 
 
                 }

@@ -11,12 +11,17 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
+import com.google.android.material.snackbar.Snackbar
 import com.schoolfam.parcher.data.user.User
-import com.schoolfam.parcher.viewModel.AdminViewModel
-import com.schoolfam.parcher.viewModel.UserViewModel
+import com.schoolfam.parcher.viewModel.*
 import kotlinx.android.synthetic.main.activity_login.*
 
 class LoginActivity : AppCompatActivity() {
+
+    private lateinit var studentViewModel: StudentViewModel
+    private lateinit var parentViewModel: ParentViewModel
+    private lateinit var teacherViewModel: TeacherViewModel
+
 
     private lateinit var fromBottomAnimation: Animation
     private lateinit var fromBottomAnimation1: Animation
@@ -44,6 +49,9 @@ class LoginActivity : AppCompatActivity() {
 
         userViewModel = ViewModelProviders.of(this).get(UserViewModel::class.java)
         adminViewModel = ViewModelProviders.of(this).get(AdminViewModel::class.java)
+        studentViewModel = ViewModelProviders.of(this).get(StudentViewModel::class.java)
+        parentViewModel = ViewModelProviders.of(this).get(ParentViewModel::class.java)
+        teacherViewModel = ViewModelProviders.of(this).get(TeacherViewModel::class.java)
 
         userViewModel.allUsers.observe(this, Observer {
                 users -> users?.let{ Toast.makeText(this,"The Number Of Users is: "+users.size,Toast.LENGTH_LONG).show()}
@@ -80,11 +88,51 @@ class LoginActivity : AppCompatActivity() {
         loginButton.startAnimation(fromBottomAnimation3)
 
         loginButton.setOnClickListener {
+            if (emailEditText.text.toString().startsWith(" ")||emailEditText.text.toString()==""||
+                passwordEditText.text.toString().startsWith(" ")||passwordEditText.text.toString()==""){
 
-           // userViewModel.insertUser(User(1,"Sinkumen","Asefa","Cnku","123456","sinkumen@gmail.com",1,"Male"))
-            Toast.makeText(this,"User Added",Toast.LENGTH_LONG).show()
-            val loginIntent = Intent(this, MainActivity::class.java)
-            startActivity(loginIntent)
+                Snackbar.make(it, "Please Fill All Fields", Snackbar.LENGTH_LONG)
+                    .setAction("Action", null).show()
+            }
+            else{
+                val email =  emailEditText.text.toString()
+                val password = passwordEditText.text.toString()
+
+                userViewModel.findUserByEmail(email).observe(this, Observer {
+                        user -> user.let {
+                    if (it!=null && user.password==password){
+                        if (user.roleId == 1L){
+                            val loginIntent = Intent(this, MainActivity::class.java)
+                            loginIntent.putExtra("currentAdmin",user)
+                            startActivity(loginIntent)
+
+                        }
+                        else if(user.roleId == 2L){
+                            val loginIntent = Intent(this, TeacherActivity::class.java)
+                            loginIntent.putExtra("currentAdmin",user)
+                            startActivity(loginIntent)
+                            Toast.makeText(this,"Teacher Detected",Toast.LENGTH_LONG).show()
+                        }
+                        else if(user.roleId == 3L){
+                            Toast.makeText(this,"Student Detected",Toast.LENGTH_LONG).show()
+                        }
+                        else if(user.roleId == 4L){
+                            Toast.makeText(this,"Parent Detected",Toast.LENGTH_LONG).show()
+                        }
+
+                    }
+                    else{
+                        Toast.makeText(this,"Invalid User",Toast.LENGTH_LONG).show()
+                    }
+                }
+                })
+
+            }
+
+
+
+
+
         }
 
     }

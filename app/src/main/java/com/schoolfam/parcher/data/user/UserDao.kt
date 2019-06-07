@@ -1,5 +1,6 @@
 package com.schoolfam.parcher.data.user
 
+import android.provider.ContactsContract
 import androidx.lifecycle.LiveData
 import androidx.room.*
 
@@ -9,8 +10,8 @@ interface UserDao {
     @Query("SELECT * FROM users WHERE id = :userId LIMIT 1")
     fun getUserById(userId:Long): LiveData<User>
 
-    @Query("SELECT * FROM users WHERE id = :userId LIMIT 1")
-    fun getUserByEmail(userId:String): LiveData<User>
+    @Query("SELECT * FROM users WHERE emailAddress = :email LIMIT 1")
+    fun getUserByEmail(email:String): LiveData<User>
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     fun insertUser(user: User):Long

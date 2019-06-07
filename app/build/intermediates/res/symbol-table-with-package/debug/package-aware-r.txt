@@ -1289,6 +1289,7 @@ drawable design_ic_visibility
 drawable design_ic_visibility_off
 drawable design_password_eye
 drawable design_snackbar_background
+drawable ic_check_black_24dp
 drawable ic_keyboard_arrow_left_black_24dp
 drawable ic_keyboard_arrow_right_black_24dp
 drawable ic_launcher_background
@@ -1457,6 +1458,7 @@ id exitUntilCollapsed
 id expand_activities_button
 id expanded_menu
 id fab
+id fab_present_attendance_button
 id fade
 id female_radio_button
 id fill
@@ -1516,6 +1518,9 @@ id mtrl_picker_header
 id mtrl_picker_header_text
 id mtrl_picker_title_text
 id multiply
+id nav_conduct_attendance
+id nav_my_student
+id nav_post_assessment
 id nav_send
 id nav_share
 id nav_tools
@@ -1610,11 +1615,18 @@ id standard
 id start
 id status_bar_latest_event_content
 id stretch
+id student_attendance_email_recylerview_item
+id student_attendance_name_recylerview_item
+id student_attendance_role_recylerview_item
 id student_email_edit_text
+id student_email_recylerview_item
 id student_first_name_edit_text
 id student_last_name_edit_text
+id student_name_recylerview_item
 id student_password_edit_text
+id student_recycler_view
 id student_register_button
+id student_role_recylerview_item
 id student_user_name_edit_text
 id submenuarrow
 id submit_area
@@ -1630,6 +1642,7 @@ id tag_unhandled_key_listeners
 id teacher_email_edit_text
 id teacher_female_radio_button
 id teacher_first_name_edit_text
+id teacher_frame_layout
 id teacher_gender_radio_group
 id teacher_last_name_edit_text
 id teacher_male_radio_button
@@ -1733,8 +1746,11 @@ layout abc_tooltip
 layout activity_login
 layout activity_main
 layout activity_splash
+layout activity_teacher
 layout app_bar_main
+layout app_bar_teacher
 layout content_main
+layout content_teacher
 layout custom_dialog
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
@@ -1754,6 +1770,7 @@ layout design_text_input_start_icon
 layout fragment_add_parent
 layout fragment_add_students
 layout fragment_add_teachers
+layout fragment_teacher_students
 layout mtrl_alert_dialog
 layout mtrl_alert_dialog_actions
 layout mtrl_alert_dialog_title
@@ -1772,6 +1789,7 @@ layout mtrl_picker_actions
 layout mtrl_picker_dialog
 layout mtrl_picker_header
 layout nav_header_main
+layout nav_header_teacher
 layout notification_action
 layout notification_action_tombstone
 layout notification_media_action
@@ -1790,6 +1808,8 @@ layout notification_template_part_time
 layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
+layout student_attendance_list_item
+layout student_list_item
 layout support_simple_spinner_dropdown_item
 layout test_action_chip
 layout test_reflow_chipgroup
@@ -1798,7 +1818,9 @@ layout test_toolbar_custom_background
 layout test_toolbar_elevation
 layout test_toolbar_surface
 menu activity_main_drawer
+menu activity_teacher_drawer
 menu main
+menu teacher
 mipmap ic_launcher
 mipmap ic_launcher_round
 plurals mtrl_badge_content_description
