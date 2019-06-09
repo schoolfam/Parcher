@@ -9,4 +9,8 @@ import java.io.Serializable
 data class AssessmentType(@PrimaryKey @ColumnInfo(name = "id") val id: Long,
                      @ColumnInfo(name = "name") val assessment_name: String,
                      @ColumnInfo(name = "maximum_point") val maximumPoint: Double
-): Serializable
+): Serializable{
+    override fun toString(): String {
+        return assessment_name
+    }
+}

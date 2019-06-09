@@ -9,3 +9,8 @@ import java.io.Serializable
 data class Subject(@PrimaryKey @ColumnInfo(name = "id") val id: Long,
               @ColumnInfo(name = "name") val subjectName: String
 ): Serializable
+{
+    override fun toString(): String {
+        return subjectName
+    }
+}

@@ -9,6 +9,12 @@ interface AssessmentDao {
     @Query("SELECT * FROM assessments WHERE id = :assessmentId LIMIT 1")
     fun getAssessmentById(assessmentId:Long): LiveData<Assessment>
 
+    @Query("SELECT * FROM assessments WHERE assessment_type_id = :assessmenttypeId AND student_id = :studenId LIMIT 1")
+    fun getAssessmentByStudentIdAndAssessementTypeId(assessmenttypeId:Long,studenId:Long): LiveData<Assessment>
+
+    @Query("SELECT * FROM assessments WHERE subject_id = :subjectId AND student_id = :studenId")
+    fun getAssessmentByStudentIdAndSubjectId(subjectId:Long,studenId:Long): LiveData<List<Assessment>>
+
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     fun insertAssessment(assessment: Assessment):Long
 

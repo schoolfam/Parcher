@@ -149,7 +149,7 @@ class AddStudentsFragment : Fragment() {
 
         userViewModel.allUsers.observe(this, Observer { parents -> parents?.let {
             val allParents:List<User> = it
-            val adapter:ArrayAdapter<User> = ArrayAdapter(activity,android.R.layout.simple_spinner_item,allParents.filter { user -> user.roleId == 4L })
+            val adapter:ArrayAdapter<User> = ArrayAdapter(activity,android.R.layout.simple_spinner_item,allParents.filter { user -> user.roleId == 4L }.reversed())
             adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
             studentParentSpinner.adapter = adapter
         } })

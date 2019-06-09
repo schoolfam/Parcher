@@ -6,12 +6,13 @@ import androidx.room.ForeignKey
 import androidx.room.PrimaryKey
 import com.schoolfam.parcher.data.student.Student
 import com.schoolfam.parcher.data.subject.Subject
+import com.schoolfam.parcher.data.user.User
 import java.io.Serializable
 
 @Entity(tableName = "assessments",
     foreignKeys = [ForeignKey(entity = Assessment::class,
         parentColumns = arrayOf("id"),
-        childColumns = arrayOf("id")), ForeignKey(entity = Student::class,
+        childColumns = arrayOf("id")), ForeignKey(entity = User::class,
         parentColumns = arrayOf("id"),
         childColumns = arrayOf("student_id")), ForeignKey(entity = Subject::class,
         parentColumns = arrayOf("id"),

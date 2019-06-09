@@ -7,8 +7,8 @@ import com.schoolfam.parcher.data.section.Section
 @Dao
 interface SectionSubjectDao {
 
-    @Query("SELECT * FROM section_subject WHERE section_id = :sectionId LIMIT 1")
-    fun getSectionSubjectBySectionId(sectionId:Long): LiveData<SectionSubject>
+    @Query("SELECT * FROM section_subject WHERE section_id = :sectionId")
+    fun getSectionSubjectBySectionId(sectionId:Long): LiveData<List<SectionSubject>>
 
     @Query("SELECT * FROM section_subject WHERE id = :sectionSubjectId LIMIT 1")
     fun getSectionSubjectById(sectionSubjectId:Long): LiveData<SectionSubject>

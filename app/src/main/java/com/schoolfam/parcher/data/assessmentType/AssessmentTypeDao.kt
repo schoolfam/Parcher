@@ -9,6 +9,8 @@ interface AssessmentTypeDao {
     @Query("SELECT * FROM assessmentTypes WHERE id = :assessmentTypeId LIMIT 1")
     fun getAssessmentTypeById(assessmentTypeId:Long): LiveData<AssessmentType>
 
+
+
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     fun insertAssessmentType(admin: AssessmentType):Long
 

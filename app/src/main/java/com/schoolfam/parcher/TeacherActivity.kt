@@ -13,6 +13,7 @@ import androidx.appcompat.widget.Toolbar
 import android.view.Menu
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import com.schoolfam.parcher.Fragments.TeacherFragments.TeacherAssessmentStudentsFragment
 import com.schoolfam.parcher.Fragments.TeacherFragments.TeacherAttendanceMenu
 import com.schoolfam.parcher.Fragments.TeacherFragments.TeacherStudentsFragment
 import com.schoolfam.parcher.data.user.User
@@ -89,7 +90,10 @@ class TeacherActivity : AppCompatActivity(), NavigationView.OnNavigationItemSele
                 fragment.arguments = bundle
             }
             R.id.nav_post_assessment -> {
-
+                fragment = TeacherAssessmentStudentsFragment()
+                val bundle = Bundle()
+                bundle.putSerializable("current_teacher",teacher)
+                fragment.arguments = bundle
             }
             R.id.nav_tools -> {
 
