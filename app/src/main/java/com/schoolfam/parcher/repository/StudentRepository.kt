@@ -11,6 +11,8 @@ class StudentRepository(private val studentDao: StudentDao) {
 
     fun  findStudentsBySectionId(sectionId:Long):LiveData<List<Student>> = studentDao.getStudentBySection(sectionId)
 
+    fun  findStudentsByParentId(parentId:Long):LiveData<List<Student>> = studentDao.getStudentByParent(parentId)
+
     fun studentById(id:Long): LiveData<Student> = studentDao.getStudentById(id)
 
     fun insertStudent(student: Student){

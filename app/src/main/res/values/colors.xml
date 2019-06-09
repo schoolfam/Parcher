@@ -5,5 +5,7 @@
     <color name="colorAccent">#FFE4AD</color>
     <color name="colorAccentDark">#FFD98E</color>
     <color name="shadow">#000</color>
+    <color name="red">#FF3C3C</color>
+    <color name="green">#4AD161</color>
     <color name="Transparent">#00000000</color>
 </resources>

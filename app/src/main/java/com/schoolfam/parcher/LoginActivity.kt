@@ -111,13 +111,18 @@ class LoginActivity : AppCompatActivity() {
                             val loginIntent = Intent(this, TeacherActivity::class.java)
                             loginIntent.putExtra("currentAdmin",user)
                             startActivity(loginIntent)
-                            Toast.makeText(this,"Teacher Detected",Toast.LENGTH_LONG).show()
+
                         }
                         else if(user.roleId == 3L){
-                            Toast.makeText(this,"Student Detected",Toast.LENGTH_LONG).show()
+                            val loginIntent = Intent(this, StudentActivity::class.java)
+                            loginIntent.putExtra("currentAdmin",user)
+                            startActivity(loginIntent)
+
                         }
                         else if(user.roleId == 4L){
-                            Toast.makeText(this,"Parent Detected",Toast.LENGTH_LONG).show()
+                            val loginIntent = Intent(this, ParentActivity::class.java)
+                            loginIntent.putExtra("currentAdmin",user)
+                            startActivity(loginIntent)
                         }
 
                     }

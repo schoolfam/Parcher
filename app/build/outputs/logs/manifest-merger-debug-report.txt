@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /home/cnku/Parcher/app/src/main/AndroidManifest.xml:2:1-36:12
-INJECTED from /home/cnku/Parcher/app/src/main/AndroidManifest.xml:2:1-36:12
-INJECTED from /home/cnku/Parcher/app/src/main/AndroidManifest.xml:2:1-36:12
-INJECTED from /home/cnku/Parcher/app/src/main/AndroidManifest.xml:2:1-36:12
+ADDED from /home/cnku/Parcher/app/src/main/AndroidManifest.xml:2:1-44:12
+INJECTED from /home/cnku/Parcher/app/src/main/AndroidManifest.xml:2:1-44:12
+INJECTED from /home/cnku/Parcher/app/src/main/AndroidManifest.xml:2:1-44:12
+INJECTED from /home/cnku/Parcher/app/src/main/AndroidManifest.xml:2:1-44:12
 MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.1.0-alpha04] /home/cnku/.gradle/caches/transforms-2/files-2.1/3e0406af26916544fb878fb53fd4f742/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.room:room-ktx:2.1.0-alpha07] /home/cnku/.gradle/caches/transforms-2/files-2.1/301329ee55856e13cceadbc6d537b8f9/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.room:room-runtime:2.1.0-alpha07] /home/cnku/.gradle/caches/transforms-2/files-2.1/71d265e6e16ef506232d04a4cc3c31d4/AndroidManifest.xml:17:1-28:12
@@ -51,25 +51,25 @@ MERGED from [androidx.documentfile:documentfile:1.0.0] /home/cnku/.gradle/caches
 MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /home/cnku/.gradle/caches/transforms-2/files-2.1/369bb3a7abf733c3c56920cf4a9203ca/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.print:print:1.0.0] /home/cnku/.gradle/caches/transforms-2/files-2.1/3c29a9020518ac92a18132ad4495c662/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.interpolator:interpolator:1.0.0] /home/cnku/.gradle/caches/transforms-2/files-2.1/0af5e8fb5fe6a2c183472dfb3b685357/AndroidManifest.xml:17:1-22:12
-INJECTED from /home/cnku/Parcher/app/src/main/AndroidManifest.xml:2:1-36:12
-INJECTED from /home/cnku/Parcher/app/src/main/AndroidManifest.xml:2:1-36:12
-INJECTED from /home/cnku/Parcher/app/src/main/AndroidManifest.xml:2:1-36:12
+INJECTED from /home/cnku/Parcher/app/src/main/AndroidManifest.xml:2:1-44:12
+INJECTED from /home/cnku/Parcher/app/src/main/AndroidManifest.xml:2:1-44:12
+INJECTED from /home/cnku/Parcher/app/src/main/AndroidManifest.xml:2:1-44:12
 	package
 		ADDED from /home/cnku/Parcher/app/src/main/AndroidManifest.xml:3:11-42
 		INJECTED from /home/cnku/Parcher/app/src/main/AndroidManifest.xml
 		INJECTED from /home/cnku/Parcher/app/src/main/AndroidManifest.xml
 	android:versionName
 		INJECTED from /home/cnku/Parcher/app/src/main/AndroidManifest.xml
-		ADDED from /home/cnku/Parcher/app/src/main/AndroidManifest.xml:2:1-36:12
+		ADDED from /home/cnku/Parcher/app/src/main/AndroidManifest.xml:2:1-44:12
 		INJECTED from /home/cnku/Parcher/app/src/main/AndroidManifest.xml
 	android:versionCode
 		INJECTED from /home/cnku/Parcher/app/src/main/AndroidManifest.xml
-		ADDED from /home/cnku/Parcher/app/src/main/AndroidManifest.xml:2:1-36:12
+		ADDED from /home/cnku/Parcher/app/src/main/AndroidManifest.xml:2:1-44:12
 		INJECTED from /home/cnku/Parcher/app/src/main/AndroidManifest.xml
 	xmlns:android
 		ADDED from /home/cnku/Parcher/app/src/main/AndroidManifest.xml:2:11-69
 application
-ADDED from /home/cnku/Parcher/app/src/main/AndroidManifest.xml:5:5-34:19
+ADDED from /home/cnku/Parcher/app/src/main/AndroidManifest.xml:5:5-42:19
 MERGED from [androidx.room:room-runtime:2.1.0-alpha07] /home/cnku/.gradle/caches/transforms-2/files-2.1/71d265e6e16ef506232d04a4cc3c31d4/AndroidManifest.xml:22:5-26:19
 MERGED from [androidx.room:room-runtime:2.1.0-alpha07] /home/cnku/.gradle/caches/transforms-2/files-2.1/71d265e6e16ef506232d04a4cc3c31d4/AndroidManifest.xml:22:5-26:19
 MERGED from [androidx.lifecycle:lifecycle-extensions:2.1.0-alpha04] /home/cnku/.gradle/caches/transforms-2/files-2.1/80ba9337bb52acfa5b840aa65f2e885b/AndroidManifest.xml:22:5-23:19
@@ -100,42 +100,54 @@ MERGED from [androidx.lifecycle:lifecycle-process:2.1.0-alpha04] /home/cnku/.gra
 		ADDED from /home/cnku/Parcher/app/src/main/AndroidManifest.xml:6:13-39
 	android:theme
 		ADDED from /home/cnku/Parcher/app/src/main/AndroidManifest.xml:11:13-44
-activity#com.schoolfam.parcher.TeacherActivity
-ADDED from /home/cnku/Parcher/app/src/main/AndroidManifest.xml:12:9-16:20
+activity#com.schoolfam.parcher.StudentActivity
+ADDED from /home/cnku/Parcher/app/src/main/AndroidManifest.xml:12:9-15:20
 	android:label
-		ADDED from /home/cnku/Parcher/app/src/main/AndroidManifest.xml:14:17-40
-	android:theme
-		ADDED from /home/cnku/Parcher/app/src/main/AndroidManifest.xml:15:17-60
+		ADDED from /home/cnku/Parcher/app/src/main/AndroidManifest.xml:14:17-63
 	android:name
 		ADDED from /home/cnku/Parcher/app/src/main/AndroidManifest.xml:13:17-48
-activity#com.schoolfam.parcher.LoginActivity
-ADDED from /home/cnku/Parcher/app/src/main/AndroidManifest.xml:17:9-18:20
-	android:name
-		ADDED from /home/cnku/Parcher/app/src/main/AndroidManifest.xml:17:19-48
-activity#com.schoolfam.parcher.SplashActivity
-ADDED from /home/cnku/Parcher/app/src/main/AndroidManifest.xml:19:9-25:20
-	android:name
-		ADDED from /home/cnku/Parcher/app/src/main/AndroidManifest.xml:19:19-49
-intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from /home/cnku/Parcher/app/src/main/AndroidManifest.xml:20:13-24:29
-action#android.intent.action.MAIN
-ADDED from /home/cnku/Parcher/app/src/main/AndroidManifest.xml:21:17-68
-	android:name
-		ADDED from /home/cnku/Parcher/app/src/main/AndroidManifest.xml:21:25-66
-category#android.intent.category.LAUNCHER
-ADDED from /home/cnku/Parcher/app/src/main/AndroidManifest.xml:23:17-76
-	android:name
-		ADDED from /home/cnku/Parcher/app/src/main/AndroidManifest.xml:23:27-74
-activity#com.schoolfam.parcher.MainActivity
-ADDED from /home/cnku/Parcher/app/src/main/AndroidManifest.xml:26:9-33:20
+activity#com.schoolfam.parcher.ParentActivity
+ADDED from /home/cnku/Parcher/app/src/main/AndroidManifest.xml:16:9-19:20
 	android:label
-		ADDED from /home/cnku/Parcher/app/src/main/AndroidManifest.xml:28:17-49
-	android:theme
-		ADDED from /home/cnku/Parcher/app/src/main/AndroidManifest.xml:29:17-60
+		ADDED from /home/cnku/Parcher/app/src/main/AndroidManifest.xml:18:17-62
 	android:name
-		ADDED from /home/cnku/Parcher/app/src/main/AndroidManifest.xml:27:17-45
+		ADDED from /home/cnku/Parcher/app/src/main/AndroidManifest.xml:17:17-47
+activity#com.schoolfam.parcher.TeacherActivity
+ADDED from /home/cnku/Parcher/app/src/main/AndroidManifest.xml:20:9-24:20
+	android:label
+		ADDED from /home/cnku/Parcher/app/src/main/AndroidManifest.xml:22:17-40
+	android:theme
+		ADDED from /home/cnku/Parcher/app/src/main/AndroidManifest.xml:23:17-60
+	android:name
+		ADDED from /home/cnku/Parcher/app/src/main/AndroidManifest.xml:21:17-48
+activity#com.schoolfam.parcher.LoginActivity
+ADDED from /home/cnku/Parcher/app/src/main/AndroidManifest.xml:25:9-26:20
+	android:name
+		ADDED from /home/cnku/Parcher/app/src/main/AndroidManifest.xml:25:19-48
+activity#com.schoolfam.parcher.SplashActivity
+ADDED from /home/cnku/Parcher/app/src/main/AndroidManifest.xml:27:9-33:20
+	android:name
+		ADDED from /home/cnku/Parcher/app/src/main/AndroidManifest.xml:27:19-49
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from /home/cnku/Parcher/app/src/main/AndroidManifest.xml:28:13-32:29
+action#android.intent.action.MAIN
+ADDED from /home/cnku/Parcher/app/src/main/AndroidManifest.xml:29:17-68
+	android:name
+		ADDED from /home/cnku/Parcher/app/src/main/AndroidManifest.xml:29:25-66
+category#android.intent.category.LAUNCHER
+ADDED from /home/cnku/Parcher/app/src/main/AndroidManifest.xml:31:17-76
+	android:name
+		ADDED from /home/cnku/Parcher/app/src/main/AndroidManifest.xml:31:27-74
+activity#com.schoolfam.parcher.MainActivity
+ADDED from /home/cnku/Parcher/app/src/main/AndroidManifest.xml:34:9-41:20
+	android:label
+		ADDED from /home/cnku/Parcher/app/src/main/AndroidManifest.xml:36:17-49
+	android:theme
+		ADDED from /home/cnku/Parcher/app/src/main/AndroidManifest.xml:37:17-60
+	android:name
+		ADDED from /home/cnku/Parcher/app/src/main/AndroidManifest.xml:35:17-45
 intent-filter#action:name:android.intent.action.MAIN
-ADDED from /home/cnku/Parcher/app/src/main/AndroidManifest.xml:30:13-32:29
+ADDED from /home/cnku/Parcher/app/src/main/AndroidManifest.xml:38:13-40:29
 uses-sdk
 INJECTED from /home/cnku/Parcher/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /home/cnku/Parcher/app/src/main/AndroidManifest.xml

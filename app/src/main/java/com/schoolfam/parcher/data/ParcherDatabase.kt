@@ -4,6 +4,7 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
+import androidx.room.TypeConverters
 import androidx.sqlite.db.SupportSQLiteDatabase
 import com.schoolfam.parcher.data.SectionSubject.SectionSubject
 import com.schoolfam.parcher.data.SectionSubject.SectionSubjectDao
@@ -29,6 +30,7 @@ import com.schoolfam.parcher.data.teacher.Teacher
 import com.schoolfam.parcher.data.teacher.TeacherDao
 import com.schoolfam.parcher.data.user.User
 import com.schoolfam.parcher.data.user.UserDao
+import com.schoolfam.parcher.utility.TypeConverter
 import com.schoolfam.parcher.utility.ioThread
 
 @Database(entities = [
@@ -44,6 +46,7 @@ import com.schoolfam.parcher.utility.ioThread
     Student::class,
     Teacher::class,
     User::class],version = 1)
+@TypeConverters(TypeConverter::class)
 abstract class ParcherDatabase : RoomDatabase() {
 
     abstract fun adminDao():AdminDao

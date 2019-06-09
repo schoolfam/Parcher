@@ -13,6 +13,7 @@ import java.util.*
 data class Attendance(
                       @ColumnInfo(name = "student_id") val studentId: Long,
                       @ColumnInfo(name = "status") val status: Boolean,
+                      @ColumnInfo(name = "section_id") val sectionId:Long,
                       @ColumnInfo(name = "date") val date: Date
 ): Serializable{
     @PrimaryKey(autoGenerate = true)

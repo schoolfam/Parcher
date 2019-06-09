@@ -29,6 +29,10 @@ class StudentViewModel(application: Application):AndroidViewModel(application) {
         return studentRepository.findStudentsBySectionId(sectionId)
     }
 
+    fun findStudentByParentId(parentId:Long): LiveData<List<Student>> {
+        return studentRepository.findStudentsByParentId(parentId)
+    }
+
 
     fun insertStudent(student:Student) =  viewModelScope.launch (Dispatchers.IO){
         studentRepository.insertStudent(student)

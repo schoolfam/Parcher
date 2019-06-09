@@ -102,7 +102,7 @@ class AddTeachersFragment : Fragment() {
                     teacherFirstNameEditText.text.toString(),
                     teacherLastNameEditText.text.toString(),
                     teacherUserNameEditText.text.toString(),
-                    teacherEmailEditText.text.toString(),
+                    teacherEmailEditText.text. toString(),
                     teacherPasswordEditText.text.toString(),
                     2, gender)
                     Toast.makeText(activity,"Progress ",Toast.LENGTH_LONG).show()
