@@ -6,6 +6,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.viewModelScope
 import com.schoolfam.parcher.data.ParcherDatabase
 import com.schoolfam.parcher.data.assessment.Assessment
+import com.schoolfam.parcher.network.DataServiceGenerator
 import com.schoolfam.parcher.repository.AssessmentRepository
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -16,7 +17,8 @@ class AssessmentViewModel (application: Application):AndroidViewModel(applicatio
 
     init {
         val assessmentDao = ParcherDatabase.getInstance(application).assessmentDao()
-        assessmentRepository = AssessmentRepository(assessmentDao)
+        val assessmentService = application.let { DataServiceGenerator().createParcherApiService(it) }
+        assessmentRepository = AssessmentRepository(assessmentDao, assessmentService)
         allAssessments = assessmentRepository.allAssessments()
     }
 

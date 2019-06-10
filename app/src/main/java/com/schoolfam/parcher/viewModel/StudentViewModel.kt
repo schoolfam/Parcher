@@ -6,6 +6,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.viewModelScope
 import com.schoolfam.parcher.data.ParcherDatabase
 import com.schoolfam.parcher.data.student.Student
+import com.schoolfam.parcher.network.DataServiceGenerator
 import com.schoolfam.parcher.repository.StudentRepository
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -17,7 +18,8 @@ class StudentViewModel(application: Application):AndroidViewModel(application) {
 
     init {
         val studentDao = ParcherDatabase.getInstance(application).studentDao()
-        studentRepository = StudentRepository(studentDao)
+        val studentService = application.let { DataServiceGenerator().createParcherApiService(it) }
+        studentRepository = StudentRepository(studentDao, studentService)
         allStudents = studentRepository.allStudent()
     }
 

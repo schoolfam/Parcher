@@ -6,6 +6,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.viewModelScope
 import com.schoolfam.parcher.data.ParcherDatabase
 import com.schoolfam.parcher.data.user.User
+import com.schoolfam.parcher.network.DataServiceGenerator
 import com.schoolfam.parcher.repository.UserRepository
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -17,7 +18,8 @@ class UserViewModel(application:Application):AndroidViewModel(application) {
     var currentUser:Long = 0
     init {
         val userDao = ParcherDatabase.getInstance(application).userDao()
-        userRepository = UserRepository(userDao)
+        val userService = application.let { DataServiceGenerator().createParcherApiService(it) }
+        userRepository = UserRepository(userDao, userService)
         allUsers = userRepository.allUsers()
     }
 

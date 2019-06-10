@@ -6,6 +6,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.viewModelScope
 import com.schoolfam.parcher.data.ParcherDatabase
 import com.schoolfam.parcher.data.announcement.Announcement
+import com.schoolfam.parcher.network.DataServiceGenerator
 import com.schoolfam.parcher.repository.AnnouncementRepository
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -17,7 +18,8 @@ class AnnouncementViewModel(application: Application):AndroidViewModel(applicati
 
     init {
         val announcementDao = ParcherDatabase.getInstance(application).announcementDao()
-        announcementRepository = AnnouncementRepository(announcementDao)
+        val announcementService = application.let { DataServiceGenerator().createParcherApiService(it) }
+        announcementRepository = AnnouncementRepository(announcementDao, announcementService)
         allAnnoncements = announcementRepository.allAnnouncement()
     }
 

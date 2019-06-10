@@ -6,6 +6,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.viewModelScope
 import com.schoolfam.parcher.data.ParcherDatabase
 import com.schoolfam.parcher.data.attendance.Attendance
+import com.schoolfam.parcher.network.DataServiceGenerator
 import com.schoolfam.parcher.repository.AdminRepository
 import com.schoolfam.parcher.repository.AttendanceRepository
 import kotlinx.coroutines.Dispatchers
@@ -20,7 +21,8 @@ class AttendanceViewModel(application: Application):AndroidViewModel(application
 
     init {
         val attendanceDao = ParcherDatabase.getInstance(application).attendanceDao()
-        attendanceRepository = AttendanceRepository(attendanceDao)
+        val attendanceService = application.let { DataServiceGenerator().createParcherApiService(it) }
+        attendanceRepository = AttendanceRepository(attendanceDao, attendanceService)
         allAttendances = attendanceRepository.allAttendance()
     }
 

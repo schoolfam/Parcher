@@ -6,6 +6,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.viewModelScope
 import com.schoolfam.parcher.data.ParcherDatabase
 import com.schoolfam.parcher.data.teacher.Teacher
+import com.schoolfam.parcher.network.DataServiceGenerator
 import com.schoolfam.parcher.repository.TeacherRepository
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -18,7 +19,8 @@ class TeacherViewModel(application: Application):AndroidViewModel(application) {
 
     init {
         val teacherDao = ParcherDatabase.getInstance(application).teacherDao()
-        teacherRepository = TeacherRepository(teacherDao)
+        val teacherService = application.let { DataServiceGenerator().createParcherApiService(it) }
+        teacherRepository = TeacherRepository(teacherDao, teacherService)
         allTeachers = teacherRepository.allTeachers()
     }
 

@@ -6,6 +6,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.viewModelScope
 import com.schoolfam.parcher.data.ParcherDatabase
 import com.schoolfam.parcher.data.admin.Admin
+import com.schoolfam.parcher.network.DataServiceGenerator
 import com.schoolfam.parcher.repository.AdminRepository
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -17,7 +18,8 @@ class AdminViewModel(application: Application): AndroidViewModel(application) {
 
     init {
         val adminDao = ParcherDatabase.getInstance(application).adminDao()
-        adminRepository = AdminRepository(adminDao)
+        val adminService = application.let { DataServiceGenerator().createParcherApiService(it) }
+        adminRepository = AdminRepository(adminDao, adminService)
         allAdmins = adminRepository.allAdmins()
     }
 
