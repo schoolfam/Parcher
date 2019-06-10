@@ -57,6 +57,7 @@ class TeacherAttendanceMenu : Fragment() {
             bundle.putSerializable("current_teacher",currentTeacher)
             attendanceFragment.arguments = bundle
             fragmentTransaction.replace(R.id.teacher_frame_layout, attendanceFragment)
+            fragmentTransaction.addToBackStack(null)
             fragmentTransaction.commit()
         }
 
@@ -70,6 +71,7 @@ class TeacherAttendanceMenu : Fragment() {
                 bundle.putSerializable("current_teacher",currentTeacher)
                 attendanceFragment.arguments = bundle
                 fragmentTransaction.replace(R.id.teacher_frame_layout, attendanceFragment)
+                fragmentTransaction.addToBackStack(null)
                 fragmentTransaction.commit()
 
             },year,month,day)

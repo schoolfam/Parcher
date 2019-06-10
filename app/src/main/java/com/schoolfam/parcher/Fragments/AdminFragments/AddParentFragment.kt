@@ -121,6 +121,7 @@ class AddParentFragment : Fragment() {
                     val fragmentTransaction = activity!!.supportFragmentManager.beginTransaction()
                     val fragment = AddParentFragment()
                     fragmentTransaction.replace(R.id.frame_layout, fragment)
+                    fragmentTransaction.addToBackStack(null)
                     fragmentTransaction.commit()
 
 

@@ -13,9 +13,7 @@ import androidx.appcompat.widget.Toolbar
 import android.view.Menu
 import android.widget.Toast
 import androidx.fragment.app.Fragment
-import com.schoolfam.parcher.Fragments.AdminFragments.AddParentFragment
-import com.schoolfam.parcher.Fragments.AdminFragments.AddStudentsFragment
-import com.schoolfam.parcher.Fragments.AdminFragments.AddTeachersFragment
+import com.schoolfam.parcher.Fragments.AdminFragments.*
 import com.schoolfam.parcher.data.user.User
 
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
@@ -86,11 +84,11 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             R.id.reg_student -> {
                 fragment= AddStudentsFragment()
             }
-            R.id.nav_tools -> {
-
+            R.id.nav_post_announcement -> {
+                fragment = PostAnnouncementFragment()
             }
-            R.id.nav_share -> {
-
+            R.id.nav_my_announcement -> {
+                fragment = ViewAnouncementFragment()
             }
             R.id.nav_send -> {
 
@@ -100,6 +98,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
         val fragmentTransaction = supportFragmentManager.beginTransaction()
         fragmentTransaction.replace(R.id.frame_layout, fragment)
+        fragmentTransaction.addToBackStack(null)
         fragmentTransaction.commit()
 
         val drawerLayout: DrawerLayout = findViewById(R.id.drawer_layout)

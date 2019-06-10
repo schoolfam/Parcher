@@ -1,6 +1,7 @@
 package com.schoolfam.parcher.Fragments.TeacherFragments
 
 
+import android.graphics.Color
 import android.os.Bundle
 import android.transition.Visibility
 import androidx.fragment.app.Fragment
@@ -8,10 +9,13 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.*
+import androidx.appcompat.app.AlertDialog
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
+import com.google.android.material.snackbar.Snackbar
 
 import com.schoolfam.parcher.R
+import com.schoolfam.parcher.data.assessment.Assessment
 import com.schoolfam.parcher.data.assessmentType.AssessmentType
 import com.schoolfam.parcher.data.subject.Subject
 import com.schoolfam.parcher.data.user.User
@@ -121,21 +125,101 @@ class TeacherViewAssessmentFragment : Fragment() {
 
             assessmentViewModel.findAssessmentByStudentIdAndSubjectId((subjectSpinner.selectedItem as Subject).id,student!!.id!!).observe(this,
                 Observer { assessments->
-                   val mAssessments = assessments.find {assessment -> assessment.assessmentTypeId == (assessmentTypeSpinner.selectedItem as AssessmentType).id }
+                   var mAssessment:Assessment? = assessments.find {assessment -> assessment.assessmentTypeId == (assessmentTypeSpinner.selectedItem as AssessmentType).id }
                     assessmentTypeTextView.text = (assessmentTypeSpinner.selectedItem as AssessmentType).assessment_name
-                    if(mAssessments!=null){
-                        scoreEditText.setText(mAssessments!!.score.toString())
+                        editAssessmentButton.setOnClickListener {
+                            if (scoreEditText.text.toString().startsWith(" ")|| scoreEditText.text.toString() == ""){
+                                Snackbar.make(it, "Please Fill Assessment Score",
+                                    Snackbar.LENGTH_LONG)
+                                    .setAction("Action", null).show()
+                            }
+                            else{
+                                if(mAssessment!!.assessmentTypeId == 1L && scoreEditText.text.toString().toDouble()>10)
+                                {
+                                    Snackbar.make(it, "Maximum Score Allowed For Test 1: 10", Snackbar.LENGTH_LONG)
+                                        .setAction("Action", null).show()
+                                }
+                                else if(mAssessment!!.assessmentTypeId == 2L && scoreEditText.text.toString().toDouble()>10)
+                                {
+                                    Snackbar.make(it, "Maximum Score Allowed For For Test 2: 10", Snackbar.LENGTH_LONG)
+                                        .setAction("Action", null).show()
+                                }
+                                else if(mAssessment!!.assessmentTypeId == 3L && scoreEditText.text.toString().toDouble()>10)
+                                {
+                                    Snackbar.make(it, "Maximum Score Allowed For Assignment 1: 10", Snackbar.LENGTH_LONG)
+                                        .setAction("Action", null).show()
+                                }
+                                else if(mAssessment!!.assessmentTypeId == 4L && scoreEditText.text.toString().toDouble()>10)
+                                {
+                                    Snackbar.make(it, "Maximum Score Allowed For Assignment 2: 10", Snackbar.LENGTH_LONG)
+                                        .setAction("Action", null).show()
+                                }
+                                else if(mAssessment!!.assessmentTypeId == 5L && scoreEditText.text.toString().toDouble()>20)
+                                {
+                                    Snackbar.make(it, "Maximum Score Allowed For Mid Exam: 20", Snackbar.LENGTH_LONG)
+                                        .setAction("Action", null).show()
+                                }
+                                else if(mAssessment!!.assessmentTypeId == 6L && scoreEditText.text.toString().toDouble()>40)
+                                {
+                                    Snackbar.make(it, "Maximum Score Allowed For Final Exam: 40", Snackbar.LENGTH_LONG)
+                                        .setAction("Action", null).show()
+                                }
+                                else{
+                                    mAssessment!!.score = scoreEditText.text.toString().toDouble()
+                                    assessmentViewModel.updateAssessment(mAssessment)
+                                    Snackbar.make(it, "Assessment Updated Successfully",
+                                        Snackbar.LENGTH_LONG)
+                                        .setAction("Action", null).show()
+                                }
+
+                            }
+                        }
+
+
+
+                        deleteAssessmentButton.setOnClickListener {view->
+
+                            val builder = AlertDialog.Builder(view.context)
+                            builder.setTitle("Delete Assessment")
+                            builder.setMessage("Are you sure You want to DELETE this Assessment?")
+                            builder.setPositiveButton("YES"){dialog, which ->
+                                assessmentViewModel.deleteAssessment(mAssessment!!)
+                                Snackbar.make(it, "Assessment Deleted Successfully",
+                                    Snackbar.LENGTH_LONG)
+                                    .setAction("Action", null).show()
+                            }
+                            builder.setNeutralButton("Cancel"){_,_ ->
+
+                            }
+                            val dialog: AlertDialog = builder.create()
+                            dialog.show()
+
+
+                        }
+
+
+
+                    if(mAssessment!=null){
+                        scoreEditText.setText(mAssessment.score.toString())
+                        editAssessmentButton.isEnabled = true
+                        deleteAssessmentButton.isEnabled = true
+
+
                     }
                     else{
                         scoreEditText.setText("")
-                    }
+                        editAssessmentButton.isEnabled = false
+                        deleteAssessmentButton.isEnabled = false
 
+                    }
                     assessmentLayout.visibility = View.VISIBLE
 
 
 
                 })
         }
+
+
 
 
 

@@ -22,7 +22,7 @@ data class Assessment(
                  @ColumnInfo(name = "subject_id") val subjectId: Long,
                  @ColumnInfo(name = "student_id") val studentId: Long,
                  @ColumnInfo(name = "assessment_type_id") val assessmentTypeId: Long,
-                 @ColumnInfo(name = "score") val score: Double
+                 @ColumnInfo(name = "score") var score: Double
 ): Serializable{
     @PrimaryKey(autoGenerate = true)
     @ColumnInfo(name = "id") var id: Long? = null

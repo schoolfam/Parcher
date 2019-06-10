@@ -15,6 +15,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.snackbar.Snackbar
 import com.schoolfam.parcher.Fragments.ParentFragments.ParentAttendanceMenu
+import com.schoolfam.parcher.Fragments.ParentFragments.ParentViewAssessmentFragment
 import com.schoolfam.parcher.R
 import com.schoolfam.parcher.data.attendance.Attendance
 import com.schoolfam.parcher.data.user.User
@@ -68,13 +69,14 @@ class ParentStudentsAdapter: RecyclerView.Adapter<ParentStudentsAdapter.ViewHold
         holder.assessmentFab.setOnClickListener {
 
 
-//            val fragment = ParentAttendanceMenu()
-//            val bundle = Bundle()
-//            bundle.putSerializable("current_student",student)
-//            fragment.arguments = bundle
-//            val fragmentTransaction = fragmentManager.beginTransaction()
-//            fragmentTransaction.replace(R.id.parent_frame_layout, fragment)
-//            fragmentTransaction.commit()
+            val fragment = ParentViewAssessmentFragment()
+            val bundle = Bundle()
+            bundle.putSerializable("current_student",student)
+            fragment.arguments = bundle
+            val fragmentTransaction = fragmentManager.beginTransaction()
+            fragmentTransaction.replace(R.id.parent_frame_layout, fragment)
+            fragmentTransaction.addToBackStack(null)
+            fragmentTransaction.commit()
             Snackbar.make(it, student.fname+" "+student.lname+"'s Assessment Selected",
                 Snackbar.LENGTH_LONG)
                 .setAction("Action", null).show()
@@ -87,6 +89,7 @@ class ParentStudentsAdapter: RecyclerView.Adapter<ParentStudentsAdapter.ViewHold
             fragment.arguments = bundle
             val fragmentTransaction = fragmentManager.beginTransaction()
             fragmentTransaction.replace(R.id.parent_frame_layout, fragment)
+            fragmentTransaction.addToBackStack(null)
             fragmentTransaction.commit()
             Snackbar.make(it, student.fname+" "+student.lname+"'s Attendance Selected",
                 Snackbar.LENGTH_LONG)
@@ -94,9 +97,6 @@ class ParentStudentsAdapter: RecyclerView.Adapter<ParentStudentsAdapter.ViewHold
         }
     }
 
-    fun fabOnclick(view: View){
-
-    }
 
     fun replaceItems(students: List<User>,fragmentManager: FragmentManager) {
         this.students = students

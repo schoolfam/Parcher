@@ -1,4 +1,4 @@
-package com.schoolfam.parcher.Fragments.ParentFragments
+package com.schoolfam.parcher.Fragments.TeacherFragments
 
 
 import android.os.Bundle
@@ -9,8 +9,7 @@ import android.view.ViewGroup
 
 import com.schoolfam.parcher.R
 
-
-class NotificationFragment : Fragment() {
+class TeacherViewAnnouncementFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -22,13 +21,10 @@ class NotificationFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_notification, container, false)
+        return inflater.inflate(R.layout.fragment_teacher_view_announcement, container, false)
     }
-
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
-
     }
 }

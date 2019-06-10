@@ -16,22 +16,19 @@
                 android:id="@+id/reg_student"
                 android:icon="@drawable/ic_menu_slideshow"
                 android:title="Register Students"/>
-        <item
-                android:id="@+id/nav_tools"
-                android:icon="@drawable/ic_menu_manage"
-                android:title="@string/menu_tools"/>
+
     </group>
 
     <item android:title="Communicate">
         <menu>
             <item
-                    android:id="@+id/nav_share"
-                    android:icon="@drawable/ic_menu_share"
-                    android:title="@string/menu_share"/>
+                    android:id="@+id/nav_post_announcement"
+                    android:icon="@drawable/ic_menu_manage"
+                    android:title="Post Announcement"/>
             <item
-                    android:id="@+id/nav_send"
-                    android:icon="@drawable/ic_menu_send"
-                    android:title="@string/menu_send"/>
+                    android:id="@+id/nav_my_announcement"
+                    android:icon="@drawable/ic_menu_manage"
+                    android:title="My Announcement"/>
         </menu>
     </item>
 

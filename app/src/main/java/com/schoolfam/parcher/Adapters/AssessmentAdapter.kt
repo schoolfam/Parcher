@@ -65,6 +65,7 @@ class AssessmentAdapter: RecyclerView.Adapter<AssessmentAdapter.ViewHolder>() {
             fragment.arguments = bundle
             val fragmentTransaction = fragmentManager.beginTransaction()
             fragmentTransaction.replace(R.id.teacher_frame_layout, fragment)
+            fragmentTransaction.addToBackStack(null)
             fragmentTransaction.commit()
 
             Snackbar.make(it, student.fname+" "+student.lname+"'s Assessment Selected",
@@ -80,6 +81,7 @@ class AssessmentAdapter: RecyclerView.Adapter<AssessmentAdapter.ViewHolder>() {
             fragment.arguments = bundle
             val fragmentTransaction = fragmentManager.beginTransaction()
             fragmentTransaction.replace(R.id.teacher_frame_layout, fragment)
+            fragmentTransaction.addToBackStack(null)
             fragmentTransaction.commit()
 
             Snackbar.make(it, student.fname+" "+student.lname+"'s Assessment View Selected",

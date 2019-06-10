@@ -6,9 +6,9 @@ import androidx.appcompat.app.AppCompatActivity
 import android.widget.TextView
 import android.widget.Toast
 import androidx.fragment.app.Fragment
-import com.schoolfam.parcher.Fragments.ParentFragments.NotificationFragment
 import com.schoolfam.parcher.Fragments.ParentFragments.ParentChildrenFragment
 import com.schoolfam.parcher.Fragments.ParentFragments.ParentMyProfileFragment
+import com.schoolfam.parcher.Fragments.ParentFragments.ParentViewAnnouncementFragment
 import com.schoolfam.parcher.data.user.User
 
 class ParentActivity : AppCompatActivity() {
@@ -26,6 +26,7 @@ class ParentActivity : AppCompatActivity() {
                 fragment.arguments = bundle
                 val fragmentTransaction = supportFragmentManager.beginTransaction()
                 fragmentTransaction.replace(R.id.parent_frame_layout, fragment)
+                fragmentTransaction.addToBackStack(null)
                 fragmentTransaction.commit()
 
                 return@OnNavigationItemSelectedListener true
@@ -38,6 +39,7 @@ class ParentActivity : AppCompatActivity() {
                 fragment.arguments = bundle
                 val fragmentTransaction = supportFragmentManager.beginTransaction()
                 fragmentTransaction.replace(R.id.parent_frame_layout, fragment)
+                fragmentTransaction.addToBackStack(null)
                 fragmentTransaction.commit()
 
 
@@ -45,12 +47,13 @@ class ParentActivity : AppCompatActivity() {
             }
             R.id.navigation_notifications -> {
 
-                fragment = NotificationFragment()
+                fragment = ParentViewAnnouncementFragment()
                 val bundle = Bundle()
                 bundle.putSerializable("current_teacher",parent)
                 fragment.arguments = bundle
                 val fragmentTransaction = supportFragmentManager.beginTransaction()
                 fragmentTransaction.replace(R.id.parent_frame_layout, fragment)
+                fragmentTransaction.addToBackStack(null)
                 fragmentTransaction.commit()
                 return@OnNavigationItemSelectedListener true
             }

@@ -43,6 +43,7 @@ class TeacherPostAssessmentFragment : Fragment() {
     private lateinit var subjectSpinner: Spinner
     private lateinit var assessmentTypeSpinner: Spinner
     private lateinit var postAssessmentButton: Button
+    private lateinit var selectSubjectButton: Button
     private lateinit var scoreEditText: EditText
 
 
@@ -82,6 +83,7 @@ class TeacherPostAssessmentFragment : Fragment() {
         assessmentTypeSpinner = assessment_type_spinner
         postAssessmentButton = post_assessment_button
         scoreEditText = assessment_score_edit_text
+        selectSubjectButton = select_subject_button
 
         studentNameTextView.text = student!!.fname+" "+ student!!.lname
 
@@ -103,23 +105,43 @@ class TeacherPostAssessmentFragment : Fragment() {
        }
        })
 
+        selectSubjectButton.setOnClickListener {
 
-        assessmentTypeViewModel.allAssessmentTypes.observe(this, Observer { assessmentTypes -> assessmentTypes?.let {
-            val allAssessmentTypes:MutableList<AssessmentType> = mutableListOf()
+            assessmentTypeViewModel.allAssessmentTypes.observe(this, Observer { assessmentTypes -> assessmentTypes?.let {
+                val allAssessmentTypes:MutableList<AssessmentType> = mutableListOf()
+                assessmentTypes.forEach { assessmentType->
+                    assessmentViewModel.findAssessmentByStudentIdAndSubjectId((subjectSpinner.selectedItem as Subject).id,student!!.id!!).observe(this,
+                        Observer { assessments->
+                            Toast.makeText(activity,"Number Of Assessment Type: "+assessments.size,Toast.LENGTH_LONG).show()
+                            if (assessments.isEmpty()){
+                                val adapter: ArrayAdapter<AssessmentType> = ArrayAdapter(activity,android.R.layout.simple_spinner_item,assessmentTypes)
+                                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+                                assessmentTypeSpinner.adapter = adapter
+                            }
+                            else{
+                               val cAssessment = assessments.find { assessment-> assessment.assessmentTypeId == assessmentType.id}
+                                if (cAssessment==null){
+                                    allAssessmentTypes.add(assessmentType)
+                                    val adapter: ArrayAdapter<AssessmentType> = ArrayAdapter(activity,android.R.layout.simple_spinner_item,allAssessmentTypes)
+                                    adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+                                    assessmentTypeSpinner.adapter = adapter
+                                }
+//                                assessments.forEach {assessment->
+//                                    if (assessment.assessmentTypeId != assessmentType.id){
+//
+//                                    }
+//                                }
+                            }
 
-            assessmentTypes.forEach {
-                assessmentViewModel.findAssessmentByStudentIdAndAssessmentTypeId(it.id,student!!.id!!).observe(this,
-                    Observer { assessment->
-                        if (assessment == null){
-                            allAssessmentTypes.add(it)
-                            val adapter: ArrayAdapter<AssessmentType> = ArrayAdapter(activity,android.R.layout.simple_spinner_item,allAssessmentTypes)
-                            adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
-                            assessmentTypeSpinner.adapter = adapter
+
                         }
-                    })
-            }
+                    )
+                }
 
-        } })
+            } })
+        }
+
+
 
         postAssessmentButton.setOnClickListener {
 
@@ -128,24 +150,62 @@ class TeacherPostAssessmentFragment : Fragment() {
                 Snackbar.make(it, "Please Enter Assessment Score", Snackbar.LENGTH_LONG)
                     .setAction("Action", null).show()
             }
+
             else{
                 val subject = subjectSpinner.selectedItem as Subject
                 val assessmentType = assessmentTypeSpinner.selectedItem as AssessmentType
                 val score = scoreEditText.text.toString().toDouble()
 
-                val newAssessment = Assessment(subject.id,student!!.id!!,assessmentType.id,score)
-                assessmentViewModel.insertAssessment(newAssessment)
+                if(assessmentType.id == 1L && scoreEditText.text.toString().toDouble()>10)
+                {
+                    Snackbar.make(it, "Maximum Score Allowed For Test 1: 10", Snackbar.LENGTH_LONG)
+                        .setAction("Action", null).show()
+                }
+                else if(assessmentType.id == 2L && scoreEditText.text.toString().toDouble()>10)
+                {
+                    Snackbar.make(it, "Maximum Score Allowed For For Test 2: 10", Snackbar.LENGTH_LONG)
+                        .setAction("Action", null).show()
+                }
+                else if(assessmentType.id == 3L && scoreEditText.text.toString().toDouble()>10)
+                {
+                    Snackbar.make(it, "Maximum Score Allowed For Assignment 1: 10", Snackbar.LENGTH_LONG)
+                        .setAction("Action", null).show()
+                }
+                else if(assessmentType.id == 4L && scoreEditText.text.toString().toDouble()>10)
+                {
+                    Snackbar.make(it, "Maximum Score Allowed For Assignment 2: 10", Snackbar.LENGTH_LONG)
+                        .setAction("Action", null).show()
+                }
+                else if(assessmentType.id == 5L && scoreEditText.text.toString().toDouble()>20)
+                {
+                    Snackbar.make(it, "Maximum Score Allowed For Mid Exam: 20", Snackbar.LENGTH_LONG)
+                        .setAction("Action", null).show()
+                }
+                else if(assessmentType.id == 6L && scoreEditText.text.toString().toDouble()>40)
+                {
+                    Snackbar.make(it, "Maximum Score Allowed For Final Exam: 40", Snackbar.LENGTH_LONG)
+                        .setAction("Action", null).show()
+                }
+                else{
+                    val newAssessment = Assessment(subject.id,student!!.id!!,assessmentType.id,score)
+                    assessmentViewModel.insertAssessment(newAssessment)
 
-                Snackbar.make(it, "Assessment Successfully Posted", Snackbar.LENGTH_LONG)
-                    .setAction("Action", null).show()
-                val fragmentTransaction = activity!!.supportFragmentManager.beginTransaction()
-                val fragment = TeacherPostAssessmentFragment()
-                val bundle = Bundle()
-                bundle.putSerializable("current_student",student)
-                bundle.putLong("section_id",sectionId!!)
-                fragment.arguments = bundle
-                fragmentTransaction.replace(R.id.teacher_frame_layout, fragment)
-                fragmentTransaction.commit()
+                    Snackbar.make(it, "Assessment Successfully Posted", Snackbar.LENGTH_LONG)
+                        .setAction("Action", null).show()
+                    val fragmentTransaction = activity!!.supportFragmentManager.beginTransaction()
+                    val fragment = TeacherPostAssessmentFragment()
+                    val bundle = Bundle()
+                    bundle.putSerializable("current_student",student)
+                    bundle.putLong("section_id",sectionId!!)
+                    fragment.arguments = bundle
+                    fragmentTransaction.replace(R.id.teacher_frame_layout, fragment)
+                    fragmentTransaction.addToBackStack(null)
+                    fragmentTransaction.commit()
+                }
+
+                }
+
+
             }
 
 
@@ -155,4 +215,3 @@ class TeacherPostAssessmentFragment : Fragment() {
 
 
     }
-}

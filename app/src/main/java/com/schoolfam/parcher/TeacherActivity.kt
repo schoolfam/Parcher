@@ -95,9 +95,6 @@ class TeacherActivity : AppCompatActivity(), NavigationView.OnNavigationItemSele
                 bundle.putSerializable("current_teacher",teacher)
                 fragment.arguments = bundle
             }
-            R.id.nav_tools -> {
-
-            }
             R.id.nav_share -> {
 
             }
@@ -107,6 +104,7 @@ class TeacherActivity : AppCompatActivity(), NavigationView.OnNavigationItemSele
         }
         val fragmentTransaction = supportFragmentManager.beginTransaction()
         fragmentTransaction.replace(R.id.teacher_frame_layout, fragment)
+        fragmentTransaction.addToBackStack(null)
         fragmentTransaction.commit()
 
         val drawerLayout: DrawerLayout = findViewById(R.id.drawer_layout)

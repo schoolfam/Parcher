@@ -138,6 +138,7 @@ class AddStudentsFragment : Fragment() {
                     val fragmentTransaction = activity!!.supportFragmentManager.beginTransaction()
                     val fragment = AddStudentsFragment()
                     fragmentTransaction.replace(R.id.frame_layout, fragment)
+                    fragmentTransaction.addToBackStack(null)
                     fragmentTransaction.commit()
 
 

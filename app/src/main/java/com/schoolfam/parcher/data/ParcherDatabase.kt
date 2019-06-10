@@ -10,6 +10,8 @@ import com.schoolfam.parcher.data.SectionSubject.SectionSubject
 import com.schoolfam.parcher.data.SectionSubject.SectionSubjectDao
 import com.schoolfam.parcher.data.admin.Admin
 import com.schoolfam.parcher.data.admin.AdminDao
+import com.schoolfam.parcher.data.announcement.Announcement
+import com.schoolfam.parcher.data.announcement.AnnouncementDao
 import com.schoolfam.parcher.data.assessment.Assessment
 import com.schoolfam.parcher.data.assessment.AssessmentDao
 import com.schoolfam.parcher.data.assessmentType.AssessmentType
@@ -35,6 +37,7 @@ import com.schoolfam.parcher.utility.ioThread
 
 @Database(entities = [
     Admin::class,
+    Announcement::class,
     Assessment::class,
     AssessmentType::class,
     Attendance::class,
@@ -50,6 +53,7 @@ import com.schoolfam.parcher.utility.ioThread
 abstract class ParcherDatabase : RoomDatabase() {
 
     abstract fun adminDao():AdminDao
+    abstract fun announcementDao(): AnnouncementDao
     abstract fun assessmentDao(): AssessmentDao
     abstract fun assessmentTypeDao():AssessmentTypeDao
     abstract fun attendanceDao(): AttendanceDao

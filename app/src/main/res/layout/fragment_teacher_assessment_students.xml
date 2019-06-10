@@ -13,7 +13,7 @@
 
     <TextView android:layout_width="match_parent"
               android:layout_height="wrap_content"
-              android:text="Conduct Attendance "
+              android:text="Post Assessment "
               android:fontFamily="@font/masque"
               android:gravity="center"
               android:textColor="@color/colorPrimary"

@@ -105,11 +105,6 @@ class AttendanceAdapter: RecyclerView.Adapter<AttendanceAdapter.ViewHolder>() {
 
         }
     }
-
-    fun fabOnclick(view: View){
-
-    }
-
     fun replaceItems(students: List<User>,userViewModel: UserViewModel,studentViewModel: StudentViewModel,attendanceViewModel: AttendanceViewModel,sectionId:Long,date:String,attendance: List<Attendance>) {
         this.students = students
         this.userViewModel = userViewModel
