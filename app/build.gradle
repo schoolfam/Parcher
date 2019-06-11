@@ -29,7 +29,11 @@ android {
         }
     }
 }
-
+android {
+    dataBinding {
+        enabled = true
+    }
+}
 dependencies {
 
     def room_version = "2.1.0-alpha07"

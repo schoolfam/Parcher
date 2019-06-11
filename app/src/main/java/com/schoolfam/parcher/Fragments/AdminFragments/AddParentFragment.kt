@@ -1,26 +1,20 @@
 package com.schoolfam.parcher.Fragments.AdminFragments
 
-
-import android.content.Intent
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.*
+import androidx.databinding.DataBindingUtil
+import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProviders
 import com.google.android.material.snackbar.Snackbar
-import com.schoolfam.parcher.MainActivity
-
 import com.schoolfam.parcher.R
 import com.schoolfam.parcher.data.parent.Parent
-import com.schoolfam.parcher.data.section.Section
-import com.schoolfam.parcher.data.teacher.Teacher
 import com.schoolfam.parcher.data.user.User
 import com.schoolfam.parcher.utility.ioThread
 import com.schoolfam.parcher.viewModel.*
 import kotlinx.android.synthetic.main.fragment_add_parent.view.*
-import kotlinx.android.synthetic.main.fragment_add_teachers.view.*
 
 class AddParentFragment : Fragment() {
     private lateinit var studentViewModel: StudentViewModel
@@ -41,9 +35,6 @@ class AddParentFragment : Fragment() {
     private lateinit var parentRegisterButton: Button
 
 
-
-
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         userViewModel = ViewModelProviders.of(this).get(UserViewModel::class.java)
@@ -61,7 +52,17 @@ class AddParentFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_add_parent, container, false)
+        var binding : com.schoolfam.parcher.databinding.FragmentAddParentBinding
+        binding = DataBindingUtil.inflate(inflater ,R.layout.fragment_add_parent,container , false)
+        var myView : View  = binding.root
+
+
+        // setting values to model
+
+
+        return myView
+
+        // return inflater.inflate(R.layout.fragment_add_parent, container, false)
     }
 
 

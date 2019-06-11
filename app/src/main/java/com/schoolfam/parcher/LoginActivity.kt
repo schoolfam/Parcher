@@ -9,12 +9,14 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
+import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import com.google.android.material.snackbar.Snackbar
 import com.schoolfam.parcher.data.user.User
 import com.schoolfam.parcher.viewModel.*
 import kotlinx.android.synthetic.main.activity_login.*
+import com.schoolfam.parcher.databinding.ActivityLoginBinding
 
 class LoginActivity : AppCompatActivity() {
 
@@ -36,13 +38,15 @@ class LoginActivity : AppCompatActivity() {
     private lateinit var userViewModel:UserViewModel
     private lateinit var adminViewModel:AdminViewModel
 
+    lateinit var LoginBinding : ActivityLoginBinding
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_login)
+        LoginBinding=DataBindingUtil.setContentView(this,R.layout.activity_login)
+
         loginButton = login_button
-        emailEditText = email_edit_text
+        LoginBinding.email_edit_text = email_edit_text
         passwordEditText = password_edit_text
         loginDescTextView = login_desc_text_view
 
