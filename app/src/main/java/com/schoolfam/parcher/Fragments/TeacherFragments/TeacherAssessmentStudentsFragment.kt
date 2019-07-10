@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -46,7 +47,11 @@ class TeacherAssessmentStudentsFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_teacher_assessment_students, container, false)
+        var binding : com.schoolfam.parcher.databinding.FragmentTeacherAssessmentStudentsBinding
+        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_teacher_assessment_students, container, false)
+        var myView : View  = binding.root
+
+        return myView
     }
 
 

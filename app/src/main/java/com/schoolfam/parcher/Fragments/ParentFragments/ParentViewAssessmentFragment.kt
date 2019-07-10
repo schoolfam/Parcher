@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.*
+import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 
@@ -55,7 +56,11 @@ class ParentViewAssessmentFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_parent_view_assessment, container, false)
+        var binding : com.schoolfam.parcher.databinding.FragmentParentViewAssessmentBinding
+        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_parent_view_assessment, container, false)
+        var myView : View  = binding.root
+
+        return myView
     }
 
 

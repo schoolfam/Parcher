@@ -3,10 +3,8 @@
 <layout>
 
     <data>
-        <variable name="userLogin"
-        type="com.schoolfam.parcher.data.user.User">
-
-        </variable>
+        <variable name="userLogin" type="com.schoolfam.parcher.data.user.User"></variable>
+        <variable name="handlers" type="com.schoolfam.parcher.databinding.ActivityLoginBinding"/>
 
     </data>
 

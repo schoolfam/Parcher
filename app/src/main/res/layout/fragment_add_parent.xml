@@ -3,8 +3,7 @@
 <layout>
 
     <data>
-        <variable name="user"
-                  type="com.schoolfam.parcher.data.user.User"/>
+        <variable name="user" type="com.schoolfam.parcher.data.user.User"/>
         <variable name="parent" type="com.schoolfam.parcher.data.parent.Parent"/>
     </data>
 

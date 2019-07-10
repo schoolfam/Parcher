@@ -1,63 +1,68 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              xmlns:app="http://schemas.android.com/apk/res-auto"
-              android:orientation="vertical"
-              android:layout_width="match_parent"
-              android:layout_height="wrap_content">
-
-    <androidx.cardview.widget.CardView
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable name="student" type="com.schoolfam.parcher.data.student.Student"/>
+        <variable name="user" type="com.schoolfam.parcher.data.user.User"/>
+    </data>
+    <LinearLayout
+            android:orientation="vertical"
             android:layout_width="match_parent"
-            app:cardCornerRadius="10dp"
-            android:layout_height="100dp"
-            android:layout_margin="10dp">
-        <LinearLayout
+            android:layout_height="wrap_content">
+
+        <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal"
-        >
-            <LinearLayout android:layout_width="wrap_content"
-                          android:layout_height="match_parent"
-                          android:layout_weight="1"
-                          android:orientation="vertical">
-                <de.hdodenhof.circleimageview.CircleImageView
-                        android:layout_width="100dp"
-                        android:layout_height="100dp"
-                        android:src="@drawable/schoolbooks"/>
+                app:cardCornerRadius="10dp"
+                android:layout_height="100dp"
+                android:layout_margin="10dp">
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+            >
+                <LinearLayout android:layout_width="wrap_content"
+                              android:layout_height="match_parent"
+                              android:layout_weight="1"
+                              android:orientation="vertical">
+                    <de.hdodenhof.circleimageview.CircleImageView
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:src="@drawable/schoolbooks"/>
+
+                </LinearLayout>
+                <LinearLayout android:layout_width="wrap_content"
+                              android:layout_height="match_parent"
+                              android:layout_weight="3"
+                              android:padding="10dp"
+                              android:orientation="vertical">
+                    <TextView
+                            android:id="@+id/student_name_recylerview_item"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/masque"
+                            android:textSize="20sp"
+                            android:text="@{user.username}"
+                    />
+                    <TextView
+                            android:id="@+id/student_email_recylerview_item"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:fontFamily="@font/spiderman_homecoming"
+                            android:text="@{user.emailAddress}"
+                    />
+                    <TextView
+                            android:id="@+id/student_role_recylerview_item"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:fontFamily="@font/spiderman_homecoming"
+                            android:text="@{user.roleId}"
+                    />
+
+                </LinearLayout>
 
             </LinearLayout>
-            <LinearLayout android:layout_width="wrap_content"
-                          android:layout_height="match_parent"
-                          android:layout_weight="3"
-                          android:padding="10dp"
-                          android:orientation="vertical">
-                <TextView
-                        android:id="@+id/student_name_recylerview_item"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/masque"
-                        android:textSize="20sp"
-                        android:text="Student Name"
-                />
-                <TextView
-                        android:id="@+id/student_email_recylerview_item"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
-                        android:fontFamily="@font/spiderman_homecoming"
-                        android:text="EMAIL"
-                />
-                <TextView
-                        android:id="@+id/student_role_recylerview_item"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
-                        android:fontFamily="@font/spiderman_homecoming"
-                        android:text="ROLE NO"
-                />
+        </androidx.cardview.widget.CardView>
 
-            </LinearLayout>
-
-        </LinearLayout>
-    </androidx.cardview.widget.CardView>
-
-</LinearLayout>
+    </LinearLayout>
+</layout>

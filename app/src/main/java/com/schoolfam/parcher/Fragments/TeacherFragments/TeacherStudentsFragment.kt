@@ -9,6 +9,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.LinearLayout
 import android.widget.Toast
+import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -43,7 +44,11 @@ class TeacherStudentsFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
 
-        return inflater.inflate(R.layout.fragment_teacher_students, container, false)
+        var binding : com.schoolfam.parcher.databinding.FragmentTeacherStudentsBinding
+        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_teacher_students, container, false)
+        var myView : View  = binding.root
+
+        return myView
     }
 
 

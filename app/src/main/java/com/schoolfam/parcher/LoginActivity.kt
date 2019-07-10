@@ -45,10 +45,10 @@ class LoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         LoginBinding=DataBindingUtil.setContentView(this,R.layout.activity_login)
 
-        loginButton = login_button
+        LoginBinding.loginButton = login_button
         LoginBinding.email_edit_text = email_edit_text
-        passwordEditText = password_edit_text
-        loginDescTextView = login_desc_text_view
+        LoginBinding.passwordEditText = password_edit_text
+        LoginBinding.loginDescTextView = login_desc_text_view
 
 
         userViewModel = ViewModelProviders.of(this).get(UserViewModel::class.java)
