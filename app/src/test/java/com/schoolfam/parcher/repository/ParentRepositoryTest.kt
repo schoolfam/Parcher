@@ -1,10 +1,11 @@
 package com.schoolfam.parcher.repository
 
+
+import android.app.Application
 import com.schoolfam.parcher.data.parent.Parent
 
 
 
-import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import androidx.room.Room
 import androidx.test.core.app.ApplicationProvider
 import androidx.test.filters.MediumTest
@@ -17,6 +18,7 @@ import org.junit.runner.RunWith
 import androidx.test.runner.AndroidJUnit4
 import com.schoolfam.parcher.data.ParcherDatabase
 import com.schoolfam.parcher.data.attendance.Attendance
+import com.schoolfam.parcher.network.ParcherApiService
 import java.time.Instant
 import java.util.*
 
@@ -30,17 +32,19 @@ class ParentRepositoryTest {
 
     private lateinit var repo: ParentRepository
     private lateinit var database: ParcherDatabase
+    private lateinit var contect: Application
+    private lateinit var parcherApiService: ParcherApiService
 
-    @get:Rule
-    var instantExecutorRule = InstantTaskExecutorRule()
+
 
     @Before
     fun setup() {
+        parcherApiService = ParcherApiService.getInstance()
         database = Room.databaseBuilder(
             ApplicationProvider.getApplicationContext(),
             ParcherDatabase::class.java,
             "parents").allowMainThreadQueries().build()
-        repo = ParentRepository(database.parentDao())
+        repo = ParentRepository(database.parentDao(),parcherApiService)
 
     }
 
@@ -48,19 +52,7 @@ class ParentRepositoryTest {
     fun cleanUp() {
         database.close()
     }
-    @Test
-    fun insertParent()= runBlocking{
-        val parent = Parent(2,9876234545)
-        repo.insertParent(parent)
-        //repo.(admin)
 
-        val result  = repo.insertParent(parent)
-
-        Assert.assertThat(result, CoreMatchers.notNullValue())
-
-
-
-    }
 
     @Test
     fun deleteParent() = runBlockingTest {
@@ -71,10 +63,20 @@ class ParentRepositoryTest {
 
         repo.deleteParent(parent)
 
-        val result = repo.deleteParent(parent)
+        val result = repo.allParents().value
         Assert.assertThat(result, CoreMatchers.nullValue())
 
     }
+    @Test
+    fun insertParent()= runBlocking{
+        val parent = Parent(2,2345678)
+        repo.insertParent(parent)
+        //repo.(admin)
 
+        val result  = repo.insertParent(parent)
+
+        Assert.assertThat(result, CoreMatchers.notNullValue())
+
+    }
 
 }

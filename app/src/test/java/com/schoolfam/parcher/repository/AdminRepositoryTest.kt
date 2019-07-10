@@ -1,6 +1,4 @@
 package com.schoolfam.parcher.repository
-
-import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import androidx.room.Room
 import androidx.test.core.app.ApplicationProvider
 import androidx.test.filters.MediumTest
@@ -13,6 +11,8 @@ import org.junit.runner.RunWith
 import androidx.test.runner.AndroidJUnit4
 import com.schoolfam.parcher.data.ParcherDatabase
 import com.schoolfam.parcher.data.admin.Admin
+import com.schoolfam.parcher.data.parent.Parent
+import com.schoolfam.parcher.network.ParcherApiService
 
 
 @ExperimentalCoroutinesApi
@@ -23,17 +23,18 @@ class AdminRepositoryTest {
 
     private lateinit var repo: AdminRepository
     private lateinit var database: ParcherDatabase
+    private lateinit var parcherApiService: ParcherApiService
 
-    @get:Rule
-    var instantExecutorRule = InstantTaskExecutorRule()
+
 
     @Before
     fun setup() {
+        parcherApiService = ParcherApiService.getInstance()
         database = Room.databaseBuilder(
             ApplicationProvider.getApplicationContext(),
             ParcherDatabase::class.java,
             "admins").allowMainThreadQueries().build()
-        repo = AdminRepository(database.adminDao())
+        repo = AdminRepository(database.adminDao(),parcherApiService)
 
     }
 
@@ -42,32 +43,32 @@ class AdminRepositoryTest {
         database.close()
     }
     @Test
-    fun insertAndRetrieve()= runBlocking{
-        val admin = Admin(2)
-        repo.adminById(admin.id!!.toLong())
-        //repo.(admin)
+    fun deleteParent() = runBlockingTest {
 
-        val result  = repo.adminById(admin.id!!.toLong())
-
-        Assert.assertThat(result, CoreMatchers.notNullValue())
+        val parent = Admin(2)
+        repo.deleteAdmin(parent)
 
 
+        repo.deleteAdmin(parent)
 
-    }
-
-    @Test
-    fun deleteAppointmentRetrieveNull() = runBlockingTest {
-
-        val admin = Admin(2)
-        repo.insertAdmin(admin)
-
-
-        repo.allAdmins()
-
-        val result = repo.allAdmins()
+        val result = repo.allAdmins().value
         Assert.assertThat(result, CoreMatchers.nullValue())
 
     }
+
+      @Test
+      fun insertAdmin() = runBlockingTest {
+
+          val admin = Admin(2)
+          repo.insertAdmin(admin)
+
+
+          repo.allAdmins()
+
+          val result = repo.allAdmins()
+          Assert.assertThat(result, CoreMatchers.nullValue())
+
+      }
 
 
 }
