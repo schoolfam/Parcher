@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/teacher_navigation_graph"
+            app:startDestination="@id/teacherMenuFragment"
+>
+
+    <fragment android:id="@+id/teacherAttendanceMenu"
+              android:name="com.schoolfam.parcher.Fragments.TeacherFragments.TeacherAttendanceMenu"
+              android:label="fragment_teacher_attendance_menu" tools:layout="@layout/fragment_teacher_attendance_menu">
+        <action android:id="@+id/action_teacherAttendanceMenu_to_teacherAttendanceFragmnet"
+                app:destination="@id/teacherAttendanceFragmnet" app:popUpTo="@+id/teacherAttendanceMenu"/>
+        <argument android:name="current_teacher" app:argType="com.schoolfam.parcher.data.user.User"/>
+    </fragment>
+    <fragment android:id="@+id/teacherPostAssessmentFragment"
+              android:name="com.schoolfam.parcher.Fragments.TeacherFragments.TeacherPostAssessmentFragment"
+              android:label="fragment_teacher_post_assessment" tools:layout="@layout/fragment_teacher_post_assessment">
+        <argument android:name="current_student" app:argType="com.schoolfam.parcher.data.user.User"/>
+        <argument android:name="section_id" app:argType="long"/>
+    </fragment>
+    <fragment android:id="@+id/teacherViewAssessmentFragment"
+              android:name="com.schoolfam.parcher.Fragments.TeacherFragments.TeacherViewAssessmentFragment"
+              android:label="fragment_teacher_view_assessment" tools:layout="@layout/fragment_teacher_view_assessment">
+        <argument android:name="current_student" app:argType="com.schoolfam.parcher.data.user.User"/>
+        <argument android:name="section_id" app:argType="long"/>
+    </fragment>
+    <fragment android:id="@+id/teacherAssessmentStudentsFragment"
+              android:name="com.schoolfam.parcher.Fragments.TeacherFragments.TeacherAssessmentStudentsFragment"
+              android:label="fragment_teacher_assessment_students"
+              tools:layout="@layout/fragment_teacher_assessment_students">
+        <action android:id="@+id/action_teacherAssessmentStudentsFragment_to_teacherPostAssessmentFragment"
+                app:destination="@id/teacherPostAssessmentFragment"
+                app:popUpTo="@+id/teacherAssessmentStudentsFragment"/>
+        <action android:id="@+id/action_teacherAssessmentStudentsFragment_to_teacherViewAssessmentFragment"
+                app:destination="@id/teacherViewAssessmentFragment"
+                app:popUpTo="@+id/teacherAssessmentStudentsFragment"/>
+        <argument android:name="current_teacher" app:argType="com.schoolfam.parcher.data.user.User"/>
+    </fragment>
+    <fragment android:id="@+id/teacherAttendanceFragmnet"
+              android:name="com.schoolfam.parcher.Fragments.TeacherFragments.TeacherAttendanceFragmnet"
+              android:label="fragment_teacher_attendance_fragmnet"
+              tools:layout="@layout/fragment_teacher_attendance_fragmnet">
+        <argument android:name="current_teacher" app:argType="com.schoolfam.parcher.data.user.User"/>
+        <argument android:name="current_date" app:argType="string"/>
+    </fragment>
+    <action android:id="@+id/action_global_teacherAttendanceMenu" app:destination="@id/teacherAttendanceMenu"
+            app:popUpTo="@+id/teacherMenuFragment"/>
+    <action android:id="@+id/action_global_teacherAssessmentStudentsFragment"
+            app:destination="@id/teacherAssessmentStudentsFragment" app:popUpTo="@+id/teacherMenuFragment"/>
+
+    <fragment android:id="@+id/teacherMenuFragment"
+              android:name="com.schoolfam.parcher.Fragments.TeacherFragments.TeacherMenuFragment"
+              android:label="fragment_teacher_menu" tools:layout="@layout/fragment_teacher_menu">
+        <action android:id="@+id/action_teacherMenuFragment_to_teacherAttendanceMenu"
+                app:destination="@id/teacherAttendanceMenu" app:popUpTo="@+id/teacherMenuFragment"/>
+        <action android:id="@+id/action_teacherMenuFragment_to_teacherAssessmentStudentsFragment"
+                app:destination="@id/teacherAssessmentStudentsFragment" app:popUpTo="@+id/teacherMenuFragment"/>
+        <action android:id="@+id/action_teacherMenuFragment_to_teacherStudentsFragment"
+                app:destination="@id/teacherStudentsFragment" app:popUpTo="@+id/teacherMenuFragment"/>
+    </fragment>
+    <action android:id="@+id/action_global_teacherPostAssessmentFragment"
+            app:destination="@id/teacherPostAssessmentFragment" app:popUpTo="@+id/teacherAssessmentStudentsFragment"/>
+    <fragment android:id="@+id/teacherStudentsFragment"
+              android:name="com.schoolfam.parcher.Fragments.TeacherFragments.TeacherStudentsFragment"
+              android:label="fragment_teacher_students" tools:layout="@layout/fragment_teacher_students"/>
+    <action android:id="@+id/action_global_teacherStudentsFragment" app:destination="@id/teacherStudentsFragment"
+            app:popUpTo="@+id/teacherMenuFragment"/>
+</navigation>

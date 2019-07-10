@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent"
+            xmlns:tools="http://schemas.android.com/tools"
+
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fillViewport="true"
+            android:scrollbars="vertical"
+            tools:context=".Fragments.ParentFragments.ParentChildrenFragment"
+            xmlns:android="http://schemas.android.com/apk/res/android">
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             xmlns:app="http://schemas.android.com/apk/res-auto"
+            >
+    <TextView android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:text="Wel Come "
+              android:fontFamily="@font/masque"
+              android:gravity="center"
+              android:textColor="@color/colorPrimary"
+              android:textSize="25sp"
+              app:layout_constraintTop_toTopOf="parent" android:layout_marginTop="50dp" android:id="@+id/textView3"/>
+    <TextView
+            android:text="DATE:  2/6/2019"
+            android:id="@+id/date_text_view"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_marginTop="20dp"
+
+            android:textSize="20dp"
+            android:fontFamily="@font/spiderman_homecoming"
+            app:layout_constraintTop_toBottomOf="@+id/textView3"
+            android:layout_height="wrap_content"/>
+    <TextView android:layout_width="match_parent"
+              android:layout_height="50dp"
+              android:gravity="center"
+              android:text="HERE IS LIST OF YOUR CHILDREN"
+              android:fontFamily="@font/spiderman_homecoming"
+              app:layout_constraintTop_toBottomOf="@+id/date_text_view"
+              android:id="@+id/textView4"/>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/parent_children_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layoutManager="LinearLayoutManager"
+            tools:context=".view.MyQuoteListFragment"
+            tools:listitem="@layout/student_list_item" app:layout_constraintTop_toBottomOf="@+id/textView4"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

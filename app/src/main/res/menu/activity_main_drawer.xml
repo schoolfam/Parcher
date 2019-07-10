@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:tools="http://schemas.android.com/tools"
+      tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+                android:id="@+id/addTeachersFragment"
+                android:icon="@drawable/ic_menu_camera"
+                android:title="Register Teachers"/>
+        <item
+                android:id="@+id/addParentFragment"
+                android:icon="@drawable/ic_menu_gallery"
+                android:title="Register Parents"/>
+        <item
+                android:id="@+id/addStudentsFragment"
+                android:icon="@drawable/ic_menu_slideshow"
+                android:title="Register Students"/>
+
+    </group>
+
+    <item android:title="Communicate">
+        <menu>
+            <item
+                    android:id="@+id/postAnnouncementFragment"
+                    android:icon="@drawable/ic_menu_manage"
+                    android:title="Post Announcement"/>
+            <item
+                    android:id="@+id/viewAnouncementFragment"
+                    android:icon="@drawable/ic_menu_manage"
+                    android:title="My Announcement"/>
+        </menu>
+    </item>
+
+</menu>

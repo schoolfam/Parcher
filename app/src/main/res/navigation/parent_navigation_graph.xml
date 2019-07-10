@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools" android:id="@+id/parent_navigation_graph"
+            app:startDestination="@id/parentMenuFragment">
+
+    <fragment android:id="@+id/parentAttendanceMenu"
+              android:name="com.schoolfam.parcher.Fragments.ParentFragments.ParentAttendanceMenu"
+              android:label="fragment_parent_attendance_menu" tools:layout="@layout/fragment_parent_attendance_menu">
+        <action android:id="@+id/action_parentAttendanceMenu_to_parentChildAttendanceFragment2"
+                app:destination="@id/parentChildAttendanceFragment2"/>
+        <argument android:name="current_student" app:argType="com.schoolfam.parcher.data.student.Student"/>
+    </fragment>
+    <fragment android:id="@+id/parentChildAttendanceFragment2"
+              android:name="com.schoolfam.parcher.Fragments.ParentFragments.ParentChildAttendanceFragment"
+              android:label="fragment_parent_child_attendance" tools:layout="@layout/fragment_parent_child_attendance">
+        <argument android:name="current_student" app:argType="com.schoolfam.parcher.data.user.User"/>
+        <argument android:name="current_date" app:argType="string"/>
+    </fragment>
+    <fragment android:id="@+id/parentViewAnnouncementFragment"
+              android:name="com.schoolfam.parcher.Fragments.ParentFragments.ParentViewAnnouncementFragment"
+              android:label="fragment_parent_view_announcement"
+              tools:layout="@layout/fragment_parent_view_announcement"/>
+    <fragment android:id="@+id/parentViewAssessmentFragment"
+              android:name="com.schoolfam.parcher.Fragments.ParentFragments.ParentViewAssessmentFragment"
+              android:label="fragment_parent_view_assessment" tools:layout="@layout/fragment_parent_view_assessment">
+        <argument android:name="current_student" app:argType="com.schoolfam.parcher.data.student.Student"/>
+    </fragment>
+    <fragment android:id="@+id/parentMyProfileFragment"
+              android:name="com.schoolfam.parcher.Fragments.ParentFragments.ParentMyProfileFragment"
+              android:label="fragment_parent_my_profile" tools:layout="@layout/fragment_parent_my_profile">
+        <argument android:name="current_teacher" app:argType="com.schoolfam.parcher.data.user.User"/>
+    </fragment>
+    <fragment android:id="@+id/parentChildrenFragment"
+              android:name="com.schoolfam.parcher.Fragments.ParentFragments.ParentChildrenFragment"
+              android:label="fragment_parent_children" tools:layout="@layout/fragment_parent_children">
+        <action android:id="@+id/action_parentChildrenFragment_to_parentAttendanceMenu"
+                app:destination="@id/parentAttendanceMenu"/>
+        <action android:id="@+id/action_parentChildrenFragment_to_parentViewAssessmentFragment"
+                app:destination="@id/parentViewAssessmentFragment"/>
+        <argument android:name="current_teacher" app:argType="com.schoolfam.parcher.data.user.User"/>
+    </fragment>
+    <action android:id="@+id/action_global_parentChildrenFragment" app:destination="@id/parentChildrenFragment"/>
+    <action android:id="@+id/action_global_parentMyProfileFragment" app:destination="@id/parentMyProfileFragment"/>
+    <action android:id="@+id/action_global_parentViewAnnouncementFragment" app:destination="@id/parentViewAnnouncementFragment"/>
+    <fragment android:id="@+id/parentMenuFragment"
+              android:name="com.schoolfam.parcher.Fragments.ParentFragments.ParentMenuFragment"
+              android:label="fragment_parent_menu" tools:layout="@layout/fragment_parent_menu"/>
+</navigation>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools" android:id="@+id/parcher_navigation_graph"
+            app:startDestination="@id/viewAnouncementFragment">
+    <fragment android:id="@+id/addTeachersFragment"
+              android:name="com.schoolfam.parcher.Fragments.AdminFragments.AddTeachersFragment"
+              android:label="fragment_add_teachers" tools:layout="@layout/fragment_add_teachers"/>
+
+    <fragment android:id="@+id/addParentFragment"
+              android:name="com.schoolfam.parcher.Fragments.AdminFragments.AddParentFragment"
+              android:label="fragment_add_parent" tools:layout="@layout/fragment_add_parent"/>
+
+    <fragment android:id="@+id/addStudentsFragment"
+              android:name="com.schoolfam.parcher.Fragments.AdminFragments.AddStudentsFragment"
+              android:label="fragment_add_students" tools:layout="@layout/fragment_add_students"/>
+
+    <fragment android:id="@+id/postAnnouncementFragment"
+              android:name="com.schoolfam.parcher.Fragments.AdminFragments.PostAnnouncementFragment"
+              android:label="fragment_post_announcement" tools:layout="@layout/fragment_post_announcement">
+        <action android:id="@+id/action_postAnnouncementFragment_to_viewAnouncementFragment"
+                app:destination="@id/viewAnouncementFragment"/>
+    </fragment>
+
+    <fragment android:id="@+id/viewAnouncementFragment"
+              android:name="com.schoolfam.parcher.Fragments.AdminFragments.ViewAnouncementFragment"
+              android:label="fragment_view_anouncement" tools:layout="@layout/fragment_view_anouncement">
+        <action android:id="@+id/action_viewAnouncementFragment_to_editAnnouncementFragment"
+                app:destination="@id/editAnnouncementFragment" app:popUpTo="@+id/viewAnouncementFragment"/>
+    </fragment>
+    <fragment android:id="@+id/editAnnouncementFragment"
+              android:name="com.schoolfam.parcher.Fragments.AdminFragments.EditAnnouncementFragment"
+              android:label="fragment_edit_announcement" tools:layout="@layout/fragment_edit_announcement">
+        <argument android:name="current_announcement"
+                  app:argType="com.schoolfam.parcher.data.announcement.Announcement"/>
+    </fragment>
+    <action android:id="@+id/action_global_viewAnouncementFragment" app:destination="@id/viewAnouncementFragment"/>
+    <action android:id="@+id/action_global_addTeachersFragment" app:destination="@id/addTeachersFragment"
+            app:popUpTo="@+id/viewAnouncementFragment"/>
+    <action android:id="@+id/action_global_addParentFragment" app:destination="@id/addParentFragment"
+            app:popUpTo="@+id/viewAnouncementFragment"/>
+    <action android:id="@+id/action_global_addStudentsFragment" app:destination="@id/addStudentsFragment"
+            app:popUpTo="@+id/viewAnouncementFragment"/>
+    <action android:id="@+id/action_global_postAnnouncementFragment" app:destination="@id/postAnnouncementFragment"
+            app:popUpTo="@+id/viewAnouncementFragment"/>
+</navigation>

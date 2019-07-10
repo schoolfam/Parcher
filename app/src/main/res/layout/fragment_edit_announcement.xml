@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                   xmlns:tools="http://schemas.android.com/tools"
+                                                   android:layout_width="match_parent"
+                                                   android:layout_height="match_parent"
+                                                   xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                   tools:context=".Fragments.AdminFragments.EditAnnouncementFragment">
+
+    <TextView android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:text="Edit ANNOUNCEMENT"
+              android:fontFamily="@font/masque"
+              android:gravity="center"
+              android:textColor="@color/colorPrimary"
+              android:textSize="25sp"
+              app:layout_constraintTop_toTopOf="parent" android:layout_marginTop="50dp"
+              tools:layout_editor_absoluteX="0dp" android:id="@+id/register_parent_textView"/>
+
+
+    <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            app:layout_constraintTop_toBottomOf="@+id/register_parent_textView"
+            android:id="@+id/card_view"
+            android:layout_gravity="center"
+            app:cardCornerRadius="10dp"
+    >
+
+        <LinearLayout android:layout_width="match_parent"
+                      android:orientation="vertical"
+                      android:layout_height="wrap_content"
+                      android:paddingRight="40dp"
+                      android:paddingLeft="40dp"
+                      android:layout_marginTop="8dp">
+
+
+            <EditText
+                    android:id="@+id/edit_announcement_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="TITLE"
+                    android:textSize="15dp"
+                    android:inputType="textEmailAddress"
+                    android:fontFamily="@font/spiderman_homecoming"
+                    android:layout_marginTop="30dp"
+            />
+            <EditText
+                    android:id="@+id/edit_announcement_desc"
+                    android:inputType="textMultiLine"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:imeOptions="actionDone"
+                    android:minLines="5"
+                    android:hint="DESCRIPTION"
+                    android:textSize="15dp"
+                    android:fontFamily="@font/spiderman_homecoming"
+                    android:layout_marginTop="30dp"
+            />
+
+
+            <Button
+                    android:id="@+id/edit_announcement_button"
+                    android:layout_width="wrap_content"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginBottom="50dp"
+                    android:fontFamily="sans-serif-smallcaps"
+                    android:text="Edit"
+                    android:textColor="#fff"
+                    android:background="@drawable/round_button"
+            />
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
