@@ -1,13 +1,13 @@
 package com.schoolfam.parcher.Fragments.AdminFragments
 
 
-
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.*
+import androidx.databinding.DataBindingUtil
+import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProviders
 import androidx.navigation.fragment.findNavController
 import com.google.android.material.snackbar.Snackbar
@@ -37,9 +37,6 @@ class AddParentFragment : Fragment() {
     private lateinit var parentRegisterButton: Button
 
 
-
-
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         userViewModel = ViewModelProviders.of(this).get(UserViewModel::class.java)
@@ -57,7 +54,18 @@ class AddParentFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_add_parent, container, false)
+        // Data Binding
+        var binding : com.schoolfam.parcher.databinding.FragmentAddParentBinding
+        binding = DataBindingUtil.inflate(inflater ,R.layout.fragment_add_parent,container , false)
+        var myView : View  = binding.root
+
+
+        // setting values to model
+
+
+        return myView
+
+        // return inflater.inflate(R.layout.fragment_add_parent, container, false)
     }
 
 

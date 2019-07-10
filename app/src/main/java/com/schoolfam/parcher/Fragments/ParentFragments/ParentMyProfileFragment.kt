@@ -6,10 +6,14 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+<<<<<<< HEAD
+import androidx.databinding.DataBindingUtil
+=======
 import android.widget.*
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import com.google.android.material.snackbar.Snackbar
+>>>>>>> origin/Working
 
 import com.schoolfam.parcher.R
 import com.schoolfam.parcher.data.parent.Parent
@@ -51,7 +55,12 @@ class ParentMyProfileFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_parent_my_profile, container, false)
+        // Data Binding
+        var binding : com.schoolfam.parcher.databinding.FragmentParentMyProfileBinding
+        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_parent_my_profile, container, false)
+        var myView : View  = binding.root
+
+        return myView
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

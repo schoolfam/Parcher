@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.databinding.DataBindingUtil
 
 import com.schoolfam.parcher.R
 
@@ -21,7 +22,12 @@ class TeacherViewAnnouncementFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_teacher_view_announcement, container, false)
+        // Data Binding
+        var binding : com.schoolfam.parcher.databinding.FragmentTeacherViewAnnouncementBinding
+        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_teacher_view_announcement, container, false)
+        var myView : View  = binding.root
+
+        return myView
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

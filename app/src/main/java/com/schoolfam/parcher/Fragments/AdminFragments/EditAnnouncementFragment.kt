@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.EditText
+import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import androidx.navigation.fragment.findNavController
@@ -37,7 +38,12 @@ class EditAnnouncementFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_edit_announcement, container, false)
+        // Data Binding
+        var binding : com.schoolfam.parcher.databinding.FragmentEditAnnouncementBinding
+        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_edit_announcement, container, false)
+        var myView : View  = binding.root
+
+        return myView
     }
 
 
@@ -48,6 +54,7 @@ class EditAnnouncementFragment : Fragment() {
         announcementTitleEditText = edit_announcement_title
         announcementDescEditText = edit_announcement_desc
         editAnnouncementButton = edit_announcement_button
+
 
         val announcement = arguments?.getSerializable("current_announcement") as Announcement?
 

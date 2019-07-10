@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.FragmentManager
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
@@ -44,7 +45,12 @@ class ParentChildrenFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_parent_children, container, false)
+        // Data Binding
+        var binding : com.schoolfam.parcher.databinding.FragmentParentChildrenBinding
+        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_parent_children, container, false)
+        var myView : View  = binding.root
+
+        return myView
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

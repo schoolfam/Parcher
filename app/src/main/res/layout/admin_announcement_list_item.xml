@@ -1,86 +1,92 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              xmlns:app="http://schemas.android.com/apk/res-auto"
-              android:orientation="vertical"
-              android:layout_width="match_parent"
-              android:layout_height="wrap_content">
-
-    <androidx.cardview.widget.CardView
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable name="announcement" type="com.schoolfam.parcher.data.announcement.Announcement"/>
+        <variable name="currentUser" type="com.schoolfam.parcher.data.user.User"></variable>
+        <variable name="user" type="com.schoolfam.parcher.data.user.User"/>
+    </data>
+    <LinearLayout
+            android:orientation="vertical"
             android:layout_width="match_parent"
-            app:cardCornerRadius="10dp"
+            android:layout_height="wrap_content">
 
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp">
-        <LinearLayout
+        <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:padding="10dp"
-                android:orientation="horizontal"
-        >
-            <LinearLayout android:layout_width="wrap_content"
-                          android:layout_height="match_parent"
-                          android:layout_weight="3"
-                          android:padding="10dp"
-                          android:orientation="vertical">
-                <TextView
-                        android:id="@+id/announcement_title_recylerview_item"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/masque"
-                        android:textSize="30sp"
-                        android:text="Title"
-                />
-                <TextView
-                        android:id="@+id/announcement_description_recylerview_item"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:textSize="20dp"
-                        android:layout_marginTop="10dp"
-                        android:fontFamily="sans-serif-smallcaps"
-                        android:text="Desription"
-                />
-                <TextView
-                        android:id="@+id/announcement_date_recylerview_item"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
-                        android:textSize="15dp"
-                        android:fontFamily="sans-serif-smallcaps"
-                        android:text="Date"
-                />
-                <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="20dp"
-                        android:orientation="horizontal">
+                app:cardCornerRadius="10dp"
 
-                    <Button
-                            android:id="@+id/edit_announcement_menu_button"
-                            android:layout_width="wrap_content"
-                            android:layout_height="35dp"
-                            android:background="@drawable/round_button"
-                            android:textColor="#fff"
-                            android:fontFamily="sans-serif-smallcaps"
-                            android:text="Edit"
-                            android:backgroundTint="@color/green"
-                            android:layout_marginRight="20dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp">
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="10dp"
+                    android:orientation="horizontal"
+            >
+                <LinearLayout android:layout_width="wrap_content"
+                              android:layout_height="match_parent"
+                              android:layout_weight="3"
+                              android:padding="10dp"
+                              android:orientation="vertical">
+                    <TextView
+                            android:id="@+id/announcement_title_recylerview_item"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/masque"
+                            android:textSize="30sp"
+                            android:text="@{announcement.title}"
                     />
-                    <Button
-                            android:id="@+id/delete_announcement_button"
-                            android:layout_width="wrap_content"
-                            android:layout_height="35dp"
-                            android:background="@drawable/round_button"
-                            android:textColor="#fff"
+                    <TextView
+                            android:id="@+id/announcement_description_recylerview_item"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="20dp"
+                            android:layout_marginTop="10dp"
                             android:fontFamily="sans-serif-smallcaps"
-                            android:text="Delete"
-                            android:backgroundTint="@color/red"
+                            android:text="@{announcement.description}"
                     />
+                    <TextView
+                            android:id="@+id/announcement_date_recylerview_item"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:textSize="15dp"
+                            android:text="@{announcement.date}"
+                            android:fontFamily="sans-serif-smallcaps"
+                    />
+                    <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:orientation="horizontal">
+
+                        <Button
+                                android:id="@+id/edit_announcement_menu_button"
+                                android:layout_width="wrap_content"
+                                android:layout_height="35dp"
+                                android:background="@drawable/round_button"
+                                android:textColor="#fff"
+                                android:fontFamily="sans-serif-smallcaps"
+                                android:text="Edit"
+                                android:backgroundTint="@color/green"
+                                android:layout_marginRight="20dp"
+                        />
+                        <Button
+                                android:id="@+id/delete_announcement_button"
+                                android:layout_width="wrap_content"
+                                android:layout_height="35dp"
+                                android:background="@drawable/round_button"
+                                android:textColor="#fff"
+                                android:fontFamily="sans-serif-smallcaps"
+                                android:text="Delete"
+                                android:backgroundTint="@color/red"
+                        />
+
+                    </LinearLayout>
 
                 </LinearLayout>
 
             </LinearLayout>
+        </androidx.cardview.widget.CardView>
 
-        </LinearLayout>
-    </androidx.cardview.widget.CardView>
-
-</LinearLayout>
+    </LinearLayout>
+</layout>

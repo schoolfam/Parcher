@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.EditText
+import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProviders
 import androidx.navigation.fragment.findNavController
 import com.google.android.material.snackbar.Snackbar
@@ -38,7 +39,12 @@ class PostAnnouncementFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_post_announcement, container, false)
+        // Data Binding
+        var binding : com.schoolfam.parcher.databinding.FragmentPostAnnouncementBinding
+        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_post_announcement, container, false)
+        var myView : View  = binding.root
+
+        return myView
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
